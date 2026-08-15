@@ -1,0 +1,17 @@
+# Establishing Texel Density
+
+Establishing texel density in order to use 0-1 space UVs. However, some assets are too large and need to be tileable.
+
+A texel is a container of pixel
+
+![saved_compressed_image.jpg](Establishing%20Texel%20Density/saved_compressed_image.jpg)
+
+If size of texel density
+
+Pourquoi 5.12 per unit parce que 100 cm soit 100 unit = 512 pixel tout les 100 cm.
+
+Total de pixels=5.12px/unit×100cm=512pixels
+
+Dans Transform
+
+![image.png](Establishing%20Texel%20Density/image.png)
