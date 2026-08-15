@@ -1,0 +1,75 @@
+# Convention de nommage kebab-case = moins de surcharge mentale
+
+Created: May 16, 2025 10:41 AM
+Update: May 16, 2025 10:42 AM
+
+### Verdict global
+
+- **L’affirmation principale** – qu’une convention de nommage bien pensée est cruciale pour la clarté, la maintenabilité et la collaboration – est parfaitement fondée et abondamment confirmée par la littérature sur la lisibilité du code et la charge cognitive ([Florian Krämer](https://florian-kraemer.net/software-architecture/2024/07/25/The-Limits-of-Human-Cognitive-Capacities-in-Programming.html?utm_source=chatgpt.com), [Axify](https://axify.io/blog/cognitive-complexity?utm_source=chatgpt.com)).
+- **Le contenu technique** de l’étude est globalement exact, mais plusieurs points demandent rectification ou nuance, notamment la limite « 3–30 caractères », la prétendue « recommandation ISO/Microsoft du kebab-case » pour les fichiers, et le classement (subjectif) des conventions.
+
+---
+
+## 1. Principes généraux : corrects mais à nuancer
+
+| Principe | Validité | Commentaire / précisions |
+| --- | --- | --- |
+| Noms significatifs & descriptifs | ✅ | Documenté dans les guides .NET « DO choose easily readable identifier names » ([Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/general-naming-conventions?utm_source=chatgpt.com)) |
+| Cohérence | ✅ | Recommandée par tous les guides de style ; diminue la dette technique |
+| Mots complets vs abréviations | ✅ | .NET proscrit les abréviations obscures ([Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/general-naming-conventions?utm_source=chatgpt.com)) |
+| Pas de caractères spéciaux | ✅ | Les identifiants publics .NET interdisent tirets/underscores ([Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/general-naming-conventions?utm_source=chatgpt.com)) ; pour les **noms de fichiers** ou **URI**, le tiret est souvent autorisé (voir plus bas) |
+| Longueur raisonnable 3–30 car. | **❌** | Aucune source sérieuse ne fixe 30 caractères ; PEP 8 ne fixe pas de limite et Kubernetes autorise ≤ 63 caractères pour les labels ([Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/?utm_source=chatgpt.com)) |
+| Anglais par défaut | ✅ | Recommandé par PEP 8 et la doc Microsoft (Power BI, Power Fx) pour les projets collaboratifs ([Microsoft Learn](https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-semantic-models?utm_source=chatgpt.com)) |
+
+---
+
+## 2. Conventions par domaine : état réel en 2025
+
+| Domaine | Conventions (vérifiées) | Remarques |
+| --- | --- | --- |
+| **Fichiers / dossiers** | Lettres minuscules, tirets **ou** underscores, pas d’espaces ([Iowa State University Libraries](https://instr.iastate.libguides.com/file-mgmt/naming?utm_source=chatgpt.com), [datamanagement.hms.harvard.edu](https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions?utm_source=chatgpt.com)) | Aucun « standard » ISO : ISO 19650 impose le tiret – mais uniquement dans le BIM/CAD ([LinkedIn](https://www.linkedin.com/pulse/hyphen-vs-underscore-iso-cad-bim-file-naming-edgaras-timinskas-afshf?utm_source=chatgpt.com)) |
+| **Python** | `snake_case` variables/fonctions, `PascalCase` classes, `UPPER_SNAKE_CASE` constantes ([Python Enhancement Proposals (PEPs)](https://peps.python.org/pep-0008/?utm_source=chatgpt.com), [Real Python](https://realpython.com/python-pep8/?utm_source=chatgpt.com)) | Conforme PEP 8 |
+| **Java** | `PascalCase` classes, `camelCase` méthodes, `UPPER_SNAKE_CASE` constantes ([Oracle Docs](https://docs.oracle.com/cd/E23943_01/doc.1111/e17364/customxpath.htm?utm_source=chatgpt.com)) | Toujours d’actualité |
+| **C# / .NET** | `PascalCase` pour API publiques, `camelCase` ou `_camelCase` pour champs privés ([Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names?utm_source=chatgpt.com), [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/general-naming-conventions?utm_source=chatgpt.com)) | Les tirets sont interdits dans les identifiants publics |
+| **C++ (Google)** | `PascalCase` types/classes, `snake_case` fonctions/variables ([Google GitHub](https://google.github.io/styleguide/tsguide.html?utm_source=chatgpt.com)) | Identique pour Google TS/JS |
+| **Bases de données** | `snake_case` très répandu (PostgreSQL, MySQL) ([PostgreSQL](https://www.postgresql.org/docs/7.0/syntax525.htm?utm_source=chatgpt.com)) | Pas obligatoire ; éviter le couplage casse-code |
+| **REST API** | Ressources = noms pluriels en minuscules, mots séparés par tirets, pas d’extensions ([blog.dreamfactory.com](https://blog.dreamfactory.com/best-practices-for-naming-rest-api-endpoints?utm_source=chatgpt.com), [Moesif](https://www.moesif.com/blog/technical/api-development/The-Ultimate-Guide-to-REST-API-Naming-Convention/?utm_source=chatgpt.com)) | Pratique courante dans la majorité des guides 2023-25 |
+| **AWS** | schémas `env-app-region`, minuscules + tirets/underscores, cohérence dans les tags ([AWS Documentation](https://docs.aws.amazon.com/tag-editor/latest/userguide/best-practices-and-strats.html?utm_source=chatgpt.com)) | Les *tags* n’imposent pas le format mais AWS recommande la standardisation |
+| **Kubernetes** | Noms RFC 1123 (≤ 63 car., [a-z0-9-]) ([Kubernetes](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/?utm_source=chatgpt.com)) | Les pods/repos peuvent aller jusqu’à 253 car. |
+| **Équipement réseau (Cisco)** | Schéma fonction-site-rôle-N (`SW-BLDG1-CORE-01`) largement utilisé ([Cisco Community](https://community.cisco.com/t5/network-management/share-your-network-device-naming-conventions/td-p/599744?utm_source=chatgpt.com)) | Cisco ACI préfère l’underscore comme délimiteur interne ([Cisco](https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/application-centric-infrastructure/aci-guide-naming-convention-best-practices.pdf?utm_source=chatgpt.com)) |
+
+---
+
+## 3. Points à corriger ou relativiser
+
+| Élément de l’étude | Problème | État réel |
+| --- | --- | --- |
+| **Limite 3–30 car.** (général) | Non documentée ; contradictoire avec nombreuses specs | La plupart des outils limitent entre 63 car. (K8s label) et 253 car. (nom de pod). Pour du code, seule la lisibilité compte. |
+| **“ISO & Microsoft soutiennent le kebab-case”** | Sur-interprétation | ISO 19650 prescrit le tiret pour les *codes* BIM ; Microsoft n’autorise pas le tiret dans les identifiants .NET publics ([Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/general-naming-conventions?utm_source=chatgpt.com)). Pour Azure Storage, le tiret est autorisé mais c’est une contrainte DNS, pas une « bonne pratique cognitive » ([Microsoft Learn](https://learn.microsoft.com/en-us/rest/api/storageservices/naming-and-referencing-shares--directories--files--and-metadata?utm_source=chatgpt.com)). |
+| **Constance du kebab-case dans les frameworks web** | Partielle | Next.js et React tolèrent surtout le *lowercase* + tiret pour les fichiers, mais recommandent plutôt `PascalCase` pour les composants JS/TS ([Medium](https://medium.com/%40hiro08gh/next-js-naming-conventions-are-checked-with-eslint-rules-946371d67882?utm_source=chatgpt.com), [Medium](https://medium.com/dot-intern/nextjs-development-guideline-using-react-query-383008562c87?utm_source=chatgpt.com)). |
+| **Sources “BrowserStack”, “Hire A Writer”** | Peu académiques | Préférer les guides officiels (PEP, Oracle, Microsoft, K8s) ou études à comité de lecture pour la charge cognitive. |
+| **Classement 1 → 11** | Purement subjectif | L’importance d’une convention dépend du contexte du projet ; impossible de mettre Python devant l’API REST dans un backend Java, par exemple. |
+
+---
+
+## 4. Recommandation experte pour les *fichiers & dossiers* (2025)
+
+- **Choisir un unique séparateur visuel** : tiret (`kebab-case`) **ou** underscore (`snake_case`). Les deux sont sûrs sur Windows/macOS/Linux ; éviter les espaces pour l’automatisation et les URL.
+- **Minuscule + ASCII** : garantit la portabilité vers Git, conteneurs Docker et systèmes sensibles à la casse.
+- **Structure stable** : `projet-sousmodule-type` (ex. `marketing-reports-2025`).
+- **Date ISO 8601** au besoin : `2025-05-16-budget.xlsx` (tri chronologique automatique).
+- **Rester cohérent avec l’écosystème** : si vous déployez sur Azure DevOps, le tiret est déjà le séparateur DNS/Storage ; sur un dépôt C# pur, l’underscore évite la confusion avec les packages NuGet.
+
+En d’autres termes : *choisissez* plutôt que *multipliez*, documentez votre choix, et appliquez-le ; la cohérence compte bien plus que le style exact.
+
+---
+
+### Conclusion
+
+L’étude fournit une bonne synthèse, mais :
+
+1. **Les grandes lignes sont justes** (principes de lisibilité, conventions des principaux langages, règles REST/K8s/AWS).
+2. **Plusieurs détails nécessitent correction** (longueur fixe, endorsement ISO/Microsoft du kebab-case, hiérarchie rigide).
+3. **Les sources devraient être renforcées** par des documents normatifs ou des guides officiels plutôt que des blogs à faible relecture.
+
+Si vous vous appuyez sur ces conventions en les mettant à jour avec les précisions ci-dessus, vous disposerez d’une base solide et réaliste en 2025.
