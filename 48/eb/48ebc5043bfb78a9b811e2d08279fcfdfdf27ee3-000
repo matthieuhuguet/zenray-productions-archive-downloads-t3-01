@@ -1,0 +1,10 @@
+# Telecharger torrent sur IOS sur ish linux alpine
+
+Created: October 6, 2024 2:12 AM
+Update: October 6, 2024 2:14 AM
+
+app add rtorrent
+
+rtorrent files.torrent
+
+Split screen
