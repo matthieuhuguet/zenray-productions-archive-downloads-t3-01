@@ -1,0 +1,46 @@
+﻿Titre,Donut with cycles,Property,Fichiers
+,ALT TAB pour changer de fenêtre ou software quickly,,
+,SSS subsurface scatteringdiffusion de la lumière sous surface (rétrodiffusé).,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%203.png
+,Setup lighting,,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image.jpg
+,3 point lighting,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%204.png
+,"Clear location to set an object at {0.0, 0.0, 0.0} Location",,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%201.jpg
+,OptiX is optimized for RT,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%205.png
+,,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%206.png
+,"Rasterized RenderingHighly efficient and fast, making it ideal for real-time applications like video games and interactive graphics.","Path TracingComputationally intensive and slower than rasterization, often requiring powerful hardware or longer render times.",
+,Camera to view,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%207.png
+,Color Ramp,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%208.png
+,Link = LUse here to link material,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%209.png
+,Rotation Random and Scale. For Sprinkles -> Long,,
+,,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2010.png
+,,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2011.png
+,Rotate Rotation,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2012.png
+,Ctrl en restant appuyé pour faire des valeurs rondes,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2013.png
+,drag & drop the collection of Long,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2014.png
+,how many assets shares a geometry node and exposed parameters,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2015.png
+,Better OrganisationFilter By Collection,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2016.png
+,Move to selection Ctrl + G,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2017.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2018.png"
+,Set origin to geometry.,,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%202.jpg
+,Simple Deform modifier,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2019.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2020.png"
+,Loop cut and slide,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2021.png
+,X | Y | ZDéplacer sur un axe,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2022.png
+,SHORTCUTS Bevel | Extrude,,
+,Ctrl + B,Bevel,
+,Ctrl + E,Extrude,
+,,verticesedgesfaces,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2023.png
+,clip start,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2024.png
+,,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2025.png
+,Right Click Geometry Nodes,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2026.png
+,"Mettre les vraies valeurs en terme de cm, m",,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%203.jpg
+,Freeze transformations,,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%204.jpg
+,exposing variablesrenaming it in Interface,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2027.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2028.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2029.png"
+,lors du duplicate bien faire attention à prendre le parent et l'enfant.,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2030.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2031.png"
+,ctrl while brush invert the value,toggle 0 / 1,
+,,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2032.png
+,Le Weight Painting permet d'attribuer entre 0 et 1 à travers un Mesh.,,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%205.jpg
+,Poisson disk distribution,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2033.png
+,drag & drop into geometry node,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2034.png
+,multiple inputs,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2035.png
+,automatically connect the point on the nodes.,The link is highlighted.,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2036.png
+,Example,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2037.png
+,Exposing Geometry Nodes parameters,in modifier,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2038.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2039.png"
+,Geometry Nodes,,
