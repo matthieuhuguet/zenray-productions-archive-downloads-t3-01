@@ -1,0 +1,23 @@
+# Threshold Node
+
+Created: April 4, 2025 3:23 PM
+
+Cette fonction permet de transformer les pixels d'une image en blanc selon un critère de luminance prédéfini. Elle agit comme un filtre de contraste binaire rapide et précis.
+
+Paramètres clés :
+
+1. **Threshold** (0.0 - 1.0) : Valeur de luminance de référence
+2. **Mode** : Critère de comparaison avec le seuil :
+    - Supérieur
+    - Supérieur ou égal
+    - Inférieur
+    - Inférieur ou égal
+
+Fonctionnement :
+
+- Compare chaque pixel à un seuil de luminance
+- Renvoie blanc si le critère de comparaison est respecté
+- Similaire au balayage d'histogramme mais plus rapide et précis
+- Toujours au niveau de contraste maximum
+
+La fonction permet ainsi de segmenter rapidement une image en séparant les pixels selon leur luminosité.
