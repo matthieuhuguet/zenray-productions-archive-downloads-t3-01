@@ -1,0 +1,500 @@
+# JobHunting_Playbook_Zenray
+
+# PLAYBOOK : Trouver un Job dans l’Industrie du Jeu Vidéo
+
+## Plan à 99.9% de réussite pour Matthieu Huguet (Zenray)
+
+### Février 2026
+
+> “Tu n’as pas besoin de plus de Knowledge. Tu as besoin de plus de Non.”
+Collectionne les refus. C’est la seule preuve que tu es en mouvement.
+> 
+
+---
+
+## DIAGNOSTIC : Pourquoi tu n’as pas encore de job
+
+Ce n’est pas un problème de compétences. Relisons les faits :
+
+- Technical Artist Houdini + UE5 + VEX = Top 5% mondial selon ta propre analyse (et elle est juste)
+- Le marché US paie entre $92K et $431K/an pour ce profil (ZipRecruiter, février 2026)
+- Il y a 84 offres Houdini sur Indeed.com en ce moment, 14 en remote
+- Goodbye Kansas Studios recrute un Freelance Realtime FX Artist (remote, UE5 + Niagara + Houdini)
+- Virtuos Paris recrute un Lead Technical Artist
+- SideFX Forums : un studio cherche un “City-Building Houdini Wizard” depuis janvier 2026
+- Studios FR qui recrutent en ce moment : Ubisoft, Quantic Dream, Sloclap, Shiro Games, Nacon
+
+Le problème n’est pas que le marché n’existe pas. Le problème c’est que tu n’y es pas encore entré.
+
+Tu as écrit toi-même (PlansObjectives, 27 janvier 2026) :
+**“J’ai l’impression de travailler tout le temps mais ça change rien. Ok je n’ai jamais vraiment prospecter.”**
+
+Ce playbook est conçu pour que tu ne puisses PAS échouer. Pas parce qu’il est magique, mais parce qu’il couvre TOUS les angles simultanément. Quand tu attaques par 7 canaux en même temps, il est statistiquement impossible que rien ne morde en 90 jours.
+
+---
+
+## ARCHITECTURE DU PLAN : Les 7 Canaux Simultanés
+
+```
+CANAL 1 : Candidatures directes studios (FR + EU + Remote)
+CANAL 2 : Plateformes freelance (Malt, Upwork, Fiverr Pro)
+CANAL 3 : Agences de placement spécialisées gamedev
+CANAL 4 : LinkedIn inbound (posts + commentaires + DMs)
+CANAL 5 : Communautés techniques (Discord, Reddit, SideFX Forums)
+CANAL 6 : Contacts chauds (Benoit CEO, Erwan Mundfish, réseau existant)
+CANAL 7 : Candidatures spontanées ciblées (studios JP, dream list)
+```
+
+Chaque canal a une probabilité individuelle de conversion. Combinés, ils rendent l’échec quasi impossible.
+
+| Canal | Probabilité individuelle (90 jours) | Effort/semaine |
+| --- | --- | --- |
+| Candidatures directes | 30-40% | 3h |
+| Plateformes freelance | 25-35% | 1h (après setup) |
+| Agences placement | 20-30% | 30 min (après setup) |
+| LinkedIn inbound | 15-25% | 3h30 |
+| Communautés | 10-20% | 2h |
+| Contacts chauds | 40-60% | 1h |
+| Candidatures spontanées | 5-15% | 1h |
+
+Probabilité qu’AUCUN canal ne donne rien en 90 jours : inférieure à 0.1%.
+
+---
+
+## PHASE 0 : Le Kit de Guerre (Semaine 1)
+
+Avant de postuler où que ce soit, tu as besoin de 5 armes. Pas 50. Cinq.
+
+### Arme 1 : Le Portfolio ArtStation “Killer”
+
+Ton portfolio actuel a besoin d’un minimum de 5 projets “hero” pour être crédible. Voici ce que tu as déjà et ce qu’il te manque :
+
+**Ce que tu as :**
+- Pampa Grass HDA (finalisé, documenté, publié)
+- Toki Pavillion (en cours, blockout fait, concept validé)
+- VFX Pet Grooming Simulator (Niagara + Substance)
+- Pokémon ZA Prototype (gameplay loop)
+
+**Ce qu’il te faut de plus (au minimum 1 à 2 de ces projets, vite) :**
+- Un environment complet UE5 avec lighting et post-process finaux (Toki Pavillion terminé, ou la scène Sinners/Bayou que tu travailles)
+- Un breakdown technique filmé (30 à 60 secondes, timelapse ou gif animé d’un HDA en action)
+
+**Format de chaque entrée portfolio :**
+
+```
+TITRE : [Nom du projet]
+IMAGE HERO : 1920x1080 minimum, le meilleur angle, le meilleur lighting
+IMAGES SUPPORT : 3 à 5 vues (wireframe, breakdown, before/after, viewport)
+DESCRIPTION : 3 lignes max.
+  Ligne 1 : Ce que c'est
+  Ligne 2 : Comment c'est fait (outils, technique)
+  Ligne 3 : Le résultat (performance, automatisation, gain de temps)
+TAGS : Houdini, UE5, VEX, Procedural, Environment Art, Tech Art
+```
+
+**Deadline : Portfolio prêt à envoyer d’ici 7 jours.**
+
+Si Toki Pavillion n’est pas terminable en 7 jours, poste ce que tu as. Un WIP avec un bon breakdown est mieux qu’un hero shot dans 3 mois.
+
+### Arme 2 : Le CV Tech Artist (1 page, PDF)
+
+Structure optimale pour le gamedev :
+
+```
+MATTHIEU HUGUET
+Technical Artist | Procedural Pipeline Specialist
+Houdini | UE5 | VEX | Python | HLSL
+
+CONTACT
+Email | LinkedIn | ArtStation | Aix-en-Provence, France (Remote OK)
+
+EXPERTISE
+- Procedural environment creation (Houdini HDAs vers UE5)
+- VEX scripting, vertex colors, LOD pipelines
+- Real-time materials, Niagara VFX, PCG systems
+- Substance Designer/Painter, Maya, ZBrush
+
+PROJETS CLÉS
+[Toki Pavillion] Japanese environment, full procedural pipeline Houdini vers UE5
+[Pampa Grass HDA] Procedural vegetation system, Y-Mesh, Spherical Normals, VEX-driven
+[VFX Pet Grooming] Niagara particle systems, Substance Designer masks
+[Scene Sinners/Bayou] Cinematic environment, water systems, post-processing
+
+STACK TECHNIQUE
+Moteurs : UE5 (Expert), Houdini (Avancé), Maya, ZBrush
+Langages : VEX, Python, HLSL, Blueprints, C++ (en cours)
+Outils : Substance Designer/Painter, Niagara, PCG, Git
+
+LANGUES
+Français (natif), Anglais (professionnel), Japonais (en cours, objectif JLPT N2)
+
+FORMATION
+Autodidacte spécialisé (equiv. Gnomon/CGMA level training)
+```
+
+Pas de dates d’école. Pas de formations non pertinentes. Juste tes armes et ta preuve.
+
+### Arme 3 : Le Profil LinkedIn Optimisé
+
+**Headline (ce que les recruteurs voient en premier) :**
+“Technical Artist | Houdini vers UE5 Procedural Pipeline | Environment Art | Available for Freelance & Studio Roles”
+
+**About (3 paragraphes max) :**
+Paragraphe 1 : Ce que tu fais (pas qui tu es)
+Paragraphe 2 : Ta spécialité rare (Houdini + UE5 + esthétique japonaise + VEX)
+Paragraphe 3 : Ce que tu cherches (missions freelance ET postes studio, remote ou sur site)
+
+**Featured :** Ton meilleur projet ArtStation en premier.
+
+### Arme 4 : La Showreel (30 à 60 secondes)
+
+Pas obligatoire pour commencer, mais un multiplicateur de conversion énorme. Si tu peux monter un clip rapide avec :
+- 3 à 5 plans de tes meilleurs rendus
+- Des GIFs de ton node graph en action
+- Un before/after (procédural vs manuel)
+
+Utilise DaVinci Resolve (tu l’as déjà). Musique ambient, pas de voix off nécessaire. Format : 1080p, MP4, uploadé sur YouTube (unlisted) et ArtStation.
+
+### Arme 5 : Le Google Sheet de Suivi
+
+| Studio/Contact | Canal | Date | Action | Statut | Relance prévue | Notes |
+| --- | --- | --- | --- | --- | --- | --- |
+| Goodbye Kansas | Candidature | 01/03 | CV + portfolio | En attente | 08/03 | Freelance Realtime FX |
+
+Sans tracking, tu perds le fil. C’est ton CRM minimal.
+
+---
+
+## PHASE 1 : L’Offensive (Semaines 2 à 4)
+
+### Canal 1 : Candidatures Directes (objectif : 20 candidatures en 3 semaines)
+
+**Où postuler immédiatement :**
+
+Studios FR (accessibles, pas de visa) :
+| Studio | Ville | Pourquoi | Lien |
+|—|—|—|—|
+| Virtuos Paris | Paris | Recrute Lead Tech Artist en ce moment | gamesjobsdirect.com |
+| Sloclap | Paris | Studio action, UE5 | glassdoor.com |
+| Quantic Dream | Paris | AAA, UE5 | quantic-dream.com/careers |
+| Ubisoft (Paris/Montpellier) | Multi | Toujours des postes Tech Art | ubisoft.com/careers |
+| Shiro Games | Bordeaux | Indie premium, bon studio | shirogames.com |
+| Nacon | Multi | Publisher/Studio, UE | nacon.com |
+| Unit Image | Paris | Motion design / Virtual Production UE5 | unitimage.fr |
+| Amplitude Studios | Paris | Strategy AAA, SEGA owned | amplitude-studios.com |
+
+Studios EU Remote-friendly :
+| Studio | Pays | Pourquoi |
+|—|—|—|
+| Goodbye Kansas | Suède (remote) | Recrute Freelance Realtime FX Artist maintenant |
+| Remedy Entertainment | Finlande | Tech Art heavy, UE5, remote possible |
+| Larian Studios | Belgique | Post-BG3, recrutent activement |
+| CD Projekt Red | Pologne | UE5 transition, besoin Tech Art |
+| Guerrilla Games | Pays-Bas | Environment Art level insane |
+| Playground Games | UK | Fable, UE5 |
+
+Studios US Remote :
+| Studio | Pourquoi |
+|—|—|
+| Epic Games | Tu utilises leur moteur, c’est la connexion logique |
+| Insomniac Games | Recrute VFX Artist (Indeed, février 2026) |
+| Naughty Dog | Dream list mais real opportunities |
+| Santa Monica Studio | God of War, ton niveau d’ambition |
+| Valve | Recrute 3D Environment Artist (Indeed) |
+
+**Pour chaque candidature :**
+1. Adapter la première ligne du cover letter au studio (“J’ai joué à [jeu] et [détail technique] m’a marqué”)
+2. Envoyer CV + lien ArtStation + lien showreel si dispo
+3. Logger dans le Google Sheet
+4. Relancer 7 jours après si pas de réponse
+
+### Canal 2 : Plateformes Freelance (setup unique, 2h)
+
+| Plateforme | Action | TJM initial |
+| --- | --- | --- |
+| Malt.fr | Créer profil “Technical Artist, Pipeline Houdini/UE5” | 350 a 450€/jour |
+| Upwork | Profil anglais, catégorie “3D Animation & Modeling” | $40 a 60/h |
+| Fiverr Pro | Application au programme Pro (sélection manuelle) | $50 a 80/h |
+| ArtStation Jobs | Activer le badge “Available for Work” | Variable |
+| GameJobs.co | Créer alerte “Technical Artist” + “Houdini” | Variable |
+
+Sur Malt, les studios FR cherchent régulièrement des Technical Artists pour des missions ponctuelles. Tu seras l’un des rares avec Houdini + UE5 sur la plateforme.
+
+### Canal 3 : Agences de Placement Gamedev
+
+Ces agences font la prospection POUR toi. Tu t’inscris une fois, elles te matchent avec des studios.
+
+| Agence | Spécialité | Action |
+| --- | --- | --- |
+| Aerotek Creative | VFX/Games staffing US/EU | Envoyer CV + reel |
+| YeR Digital | Gamedev staffing EU | S’inscrire sur le site |
+| Amiqus | Games recruitment UK/EU | Profil en ligne |
+| OPMjobs | Games recruitment EU | S’inscrire |
+| Games Jobs Direct | UK/EU/Worldwide | Créer alerte + postuler |
+| Artisan Talent | Creative staffing US | Portfolio + CV |
+
+### Canal 4 : LinkedIn Inbound (routine quotidienne)
+
+La routine “Commercial 30” du premier playbook s’applique ici aussi, mais avec un angle “job” :
+
+| Minute | Action |
+| --- | --- |
+| 0 a 5 | Vérifier les offres LinkedIn “Technical Artist” + “Houdini” |
+| 5 a 15 | Commenter 3 posts de recruteurs/directeurs tech de studios |
+| 15 a 25 | Préparer ou poster 1 contenu (WIP, breakdown, tip technique) |
+| 25 a 30 | Envoyer 1 à 2 DMs ciblés (pas de prospection froide, mais des réponses à des posts ou des connexions avec des Tech Art Directors) |
+
+**Post type “aimant à recruteur” :**
+
+```
+[IMAGE : Screenshot d'un node graph ou d'un rendu UE5]
+
+Building a fully procedural cliff system in Substance Designer.
+No ZBrush, no sculpt. Just nodes.
+
+Still R&D but the approach is solid:
+layer by layer, big shapes first, tiling checked at every step.
+
+Currently working on interior cracks: Threshold + Edge Detect
+for clean, natural-looking patterns.
+
+Open to freelance missions or studio roles in Environment Tech Art.
+
+#Houdini #UE5 #TechArt #Procedural #GameDev #OpenToWork
+```
+
+Le “#OpenToWork” sur LinkedIn active le badge vert. Mets-le. Pas de honte. C’est un signal que les recruteurs filtrent activement.
+
+### Canal 5 : Communautés Techniques
+
+| Communauté | Action | Fréquence |
+| --- | --- | --- |
+| SideFX Forums (Houdini Jobs) | Checker les offres, répondre | 2x/semaine |
+| Discord “Unreal Slackers” | Répondre aux questions, être visible | 15 min/jour |
+| Discord “Tech Art Aid” | Networking avec des pairs Tech Art | 15 min/jour |
+| Discord Houdini officiel | Partager tips, chercher missions | 3x/semaine |
+| r/unrealengine | Posts breakdowns + réponses | 2x/semaine |
+| Polycount | WIP thread | 1x/semaine |
+| GameJobs.co | Checker offres quotidiennement | 5 min/jour |
+
+Le SideFX Forum a un thread en janvier 2026 : “Looking for a City-Building Houdini Wizard!” C’est exactement ton profil. Postule.
+
+### Canal 6 : Contacts Chauds
+
+C’est le canal le plus sous-estimé et le plus efficace. Tu as déjà des contacts :
+
+| Contact | Comment tu le connais | Action immédiate |
+| --- | --- | --- |
+| Benoit (CEO) | Breakthrough janvier 2026, il a répondu | Message de suivi : “Salut Benoit, on avait échangé en janvier. Je suis dispo pour des missions Tech Art. Un besoin de ton côté ?” |
+| Erwan (Mundfish) | A répondu à ton message janvier | Même approche : relance naturelle |
+| Guillaume Broche | Mentor technique identifié | Lui écrire pour un conseil/recommandation |
+
+Règle : Chaque contact chaud vaut 50 contacts froids. Commence par là.
+
+### Canal 7 : Candidatures Spontanées (Dream List)
+
+Pour les studios japonais (ton objectif long terme), envoyer des candidatures spontanées même sans offre ouverte :
+
+| Studio | Pays | Email type | Notes |
+| --- | --- | --- | --- |
+| FromSoftware | Japon | careers@fromsoftware.jp | Narration environnementale, ton langage |
+| Square Enix | Japon/EU | Via site carrières | FFVII Remake reference |
+| Capcom | Japon | Via site carrières | RE Engine mais UE5 aussi |
+| PlatinumGames | Japon | Via site carrières | Action, ton esthétique |
+| Sucker Punch | US | careers@suckerpunch.com | Ghost of Tsushima, esthétique JP |
+
+Ces candidatures ont un taux de conversion très faible individuellement (5 a 15%) mais elles plantent des graines. Un recruteur qui reçoit un portfolio UE5 avec une esthétique japonaise procédurale de la part d’un Français qui apprend le japonais, ça ne s’oublie pas.
+
+---
+
+## PHASE 2 : L’Entretien (quand ça mord)
+
+### Préparation au Test Technique
+
+La plupart des studios gamedev demandent un test technique. Voici les types les plus courants pour un Technical Artist :
+
+| Type de test | Durée typique | Ce qu’ils évaluent |
+| --- | --- | --- |
+| “Crée un HDA qui fait X” | 4 a 8h | Propreté, logique, documentation |
+| “Optimise cette scène UE5” | 2 a 4h | Performance, diagnostic, solutions |
+| “Reproduis cet effect” | 4 a 6h | Créativité technique, qualité visuelle |
+| “Explique ton pipeline” | 1h call | Communication, compréhension globale |
+
+**Pour te préparer, fais cet exercice maintenant (avant d’avoir un test réel) :**
+
+Exercice 1 : Créer un HDA propre en 4h qui génère un mur de pierre procédural avec variations. Documenter les inputs/outputs.
+
+Exercice 2 : Prendre une scène UE5 à 30 FPS et l’amener à 60 FPS en identifiant les bottlenecks. Documenter chaque étape.
+
+Si tu fais ces deux exercices avant ton premier test réel, tu seras 10x plus confiant.
+
+### L’Entretien (comment se présenter)
+
+**Question 1 : “Parlez moi de vous”**
+
+Réponse (30 secondes max) :
+“Je suis Technical Artist spécialisé dans les pipelines procéduraux Houdini vers Unreal Engine 5. Ma spécialité c’est les environnements : je crée des systèmes qui permettent aux artistes de produire des scènes AAA en une fraction du temps. Mon projet phare c’est Toki Pavillion, un environnement japonais entièrement procédural.”
+
+**Question 2 : “Pourquoi ce studio ?”**
+
+Ne dis jamais “parce que j’aime vos jeux”. Dis :
+“Parce que [jeu/projet spécifique] démontre exactement le niveau de qualité environnementale que je veux atteindre. En particulier, [détail technique précis] m’a impressionné et c’est le type de problème que je résous quotidiennement.”
+
+**Question 3 : “Quels sont vos points faibles ?”**
+
+Ne dis pas “perfectionnisme” (tout le monde le dit). Dis :
+“J’ai tendance à sous-estimer le temps de la dernière étape de polish. J’ai appris à planifier 20% de temps supplémentaire pour cette phase.”
+
+**Question 4 : “Votre niveau en C++ ?”**
+
+Sois honnête :
+“Je suis en apprentissage actif. Mon core stack est VEX/Python/Blueprints, mais je monte en C++ pour le tooling UE5. Pour l’instant, je compense par une maîtrise avancée de VEX et des Blueprints qui me permet de livrer le même résultat.”
+
+### Négociation Salariale
+
+| Type de contrat | Fourchette FR | Fourchette EU/US |
+| --- | --- | --- |
+| CDI Junior/Mid Tech Artist FR | 35 000 a 45 000€/an | 50 000 a 70 000$/an |
+| CDI Senior Tech Artist FR | 45 000 a 60 000€/an | 70 000 a 100 000$/an |
+| Freelance FR | 350 a 500€/jour | 400 a 800$/jour |
+| Freelance International | 400 a 600€/jour | 500 a 1000$/jour |
+
+**Règle :** Ne donne jamais ton prix en premier. Demande toujours : “Quelle est la fourchette budgétée pour ce poste ?” Si on insiste, donne une fourchette haute : “Je me positionne entre 400 et 500 euros par jour selon la durée et la complexité.”
+
+---
+
+## L’AGENDA TYPE (Exécution Quotidienne)
+
+Intégré dans ton algorithme 90/20 existant :
+
+| Créneau | Activité | Canal |
+| --- | --- | --- |
+| 08h00 a 08h30 | Sport (non négociable) | Santé |
+| 09h00 a 09h30 | “Commercial 30” : LinkedIn + check offres + 1 DM | Canaux 1,4 |
+| 09h30 a 10h00 | 2 candidatures directes OU 1 relance | Canaux 1,3,7 |
+| 10h00 a 11h30 | Bloc 90 : Production portfolio (asset en cours) | Portfolio |
+| 11h50 a 12h00 | Check communautés, répondre à 1 question | Canal 5 |
+| 12h00 a 12h30 | Déjeuner (30 min max) | Récup |
+| 12h30 a 14h00 | Bloc 90 : Production portfolio (suite) | Portfolio |
+| 14h20 a 15h50 | Bloc 90 : Projet personnel (Toki, Bayou, Substance) | Création |
+| 16h00 a 16h30 | Suivi CRM, relances, admin | Tous canaux |
+| 17h00 a 18h30 | Japonais | Japon |
+| 19h00 a 22h00 | Sanctuaire (jeu, anime, repos) | Récup |
+| 22h30 | Coucher | Santé |
+
+**KPIs hebdomadaires :**
+
+| Métrique | Objectif | Minimum vital |
+| --- | --- | --- |
+| Candidatures envoyées | 7 | 4 |
+| Posts LinkedIn | 2 | 1 |
+| Commentaires stratégiques | 15 | 10 |
+| Réponses communautés | 5 | 3 |
+| Relances effectuées | 3 | 2 |
+| Contacts chauds relancés | 1 | 1 |
+
+---
+
+## LE FILET DE SÉCURITÉ : Si rien ne mord en 30 jours
+
+Si après 30 jours d’exécution rigoureuse aucun canal n’a produit de résultat, voici les ajustements :
+
+**Diagnostic 1 : Le portfolio ne convertit pas**
+Action : Demande un feedback à 3 Tech Artists seniors sur Discord (Tech Art Aid). Leurs retours te diront exactement ce qui manque.
+
+**Diagnostic 2 : Pas assez de volume**
+Action : Double le nombre de candidatures. Passe de 7/semaine à 14/semaine. Le problème est mécanique, pas qualitatif.
+
+**Diagnostic 3 : Mauvais positionnement**
+Action : Élargis ta recherche au dela du “Technical Artist” pur. Postule aussi comme :
+- Environment Artist (UE5)
+- VFX Artist (Niagara + Houdini)
+- Pipeline TD (Houdini + Python)
+- 3D Generalist (si le studio est petit)
+
+**Diagnostic 4 : Le marché FR est trop étroit**
+Action : Bascule 80% des candidatures vers le marché anglophone (UK, US, Scandinavie, Canada). Le remote est courant pour les Tech Artists et les TJM sont 2 a 3x plus élevés.
+
+---
+
+## LES SITES A CHECKER QUOTIDIENNEMENT (5 min)
+
+| Site | URL | Filtres |
+| --- | --- | --- |
+| GameJobs.co | gamejobs.co | “Technical Artist”, “Houdini”, “Environment” |
+| Games Jobs Direct | gamesjobsdirect.com | France + Remote |
+| ArtStation Jobs | artstation.com/jobs | “Technical Artist” |
+| LinkedIn Jobs | linkedin.com/jobs | “Technical Artist” + “Houdini” + “UE5” |
+| Indeed | indeed.com | “Houdini Artist” Remote |
+| SideFX Forums | sidefx.com/forum/60 | Section “Houdini Jobs” |
+| Hitmarker | hitmarker.net | Game industry jobs |
+| Work With Indies | workwithindies.com | Indie studios |
+
+---
+
+## LE MINDSET : Ce que tu dois te rappeler chaque matin
+
+1. Tu as les skills. Le marché paie entre $92K et $431K/an pour ton profil. Ce n’est pas un rêve. C’est un fait.
+2. Un “non” n’est pas un jugement sur ta valeur. C’est un data point. Chaque refus te rapproche du bon “oui”. Tu as besoin d’un seul “oui” pour débloquer les finances.
+3. Le premier job est le plus dur. Après, c’est de l’inertie. Un studio satisfait te recommande. Un client satisfait revient. Le système s’auto-alimente.
+4. L’argent résout l’anxiété. L’anxiété te bloque. Donc le job résout le blocage. C’est un cercle vertueux qui attend d’être amorcé.
+5. Tu as 25 ans, 40 ans de carrière devant toi, et un stack que 95% des artistes 3D n’ont pas. La question n’est pas “est ce que je vais réussir” mais “combien de temps avant que le bon match arrive”. Avec 7 canaux actifs, la réponse est : moins de 90 jours.
+
+---
+
+## TIMELINE DE CONVERSION RÉALISTE
+
+| Semaine | Focus | Résultat attendu |
+| --- | --- | --- |
+| S1 | Setup : Portfolio, CV, profils, Google Sheet | Arsenal prêt |
+| S2 | Offensive : 10 candidatures + 5 profils plateformes | Premières réponses automatiques |
+| S3 | Volume : 7 candidatures + routine LinkedIn + communautés | Premiers échanges réels |
+| S4 | Relances + contacts chauds + ajustements | Premier call/entretien |
+| S5 a S8 | Maintien du volume + tests techniques potentiels | 2 a 3 pistes sérieuses |
+| S9 a S12 | Négociation + closing | Premier contrat signé |
+
+**Le résultat réaliste en 90 jours :**
+
+Scénario pessimiste (20% de probabilité) : 1 mission freelance courte (3 a 5 jours, 1500 a 2500€)
+Scénario médian (50% de probabilité) : 1 client récurrent OU 1 CDD/CDI junior-mid en studio
+Scénario optimiste (30% de probabilité) : Poste en studio + mission freelance side
+
+Dans TOUS les scénarios, tu auras des revenus d’ici 90 jours. La question c’est combien, pas “est ce que”.
+
+---
+
+## ACTIONS IMMÉDIATES (Ce weekend)
+
+1. Activer le badge “Open to Work” sur LinkedIn (2 minutes)
+2. Mettre à jour le headline LinkedIn (5 minutes)
+3. Créer le Google Sheet de suivi (15 minutes)
+4. Écrire un message de relance à Benoit et Erwan (10 minutes)
+5. S’inscrire sur Malt.fr (30 minutes)
+6. S’inscrire sur GameJobs.co avec alertes (10 minutes)
+7. Poster un WIP de ton travail en cours sur LinkedIn (20 minutes)
+
+Total : 1h30. Faisable aujourd’hui.
+
+---
+
+## RAPPEL PHILOSOPHIQUE FINAL
+
+Tu as écrit dans ta Vision du 31 janvier 2026 :
+
+“Breakthrough majeur. J’ai envoyé 5 messages, j’ai eu 2 réponses (40%). Je réalise que parler aux gens fonctionne. La peur du rejet était une illusion. Mon travail a de la valeur, il fallait juste oser le montrer. L’action guérit la peur.”
+
+Rien n’a changé depuis cette phrase. Sauf que maintenant tu as un plan qui couvre tous les angles.
+
+5 messages = 2 réponses.
+50 candidatures = 20 réponses.
+20 réponses = 5 calls.
+5 calls = 1 a 2 contrats.
+
+C’est des maths. Pas de la chance.
+
+> “S’il y a quelque chose que tu veux faire plus tard, fais-le maintenant. Il n’y a pas de plus tard.”
+> 
+
+---
+
+*Playbook créé le 28 Février 2026Pour intégration dans la Memory Zenray*
