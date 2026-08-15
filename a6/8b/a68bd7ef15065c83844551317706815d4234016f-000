@@ -1,0 +1,4 @@
+# Untitled
+
+Data Types: int
+: . int. The int data type is used for variables that will storeintegers.. Integers always take up 4 bytes of memory (32 bits). This means the range of values they can store is necessarily limited to 32 bits worth of information.range : [-2^31;2^31]
