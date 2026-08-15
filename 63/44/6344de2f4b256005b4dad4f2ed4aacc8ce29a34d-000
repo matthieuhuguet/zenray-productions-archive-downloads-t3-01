@@ -1,0 +1,42 @@
+﻿Titre,Property," 1",Fichiers
+,"correctness, design, style",improve the way of coding,
+,https://www.bing.com/ck/a?!&&p=353161d3c401578aJmltdHM9MTcxMzkxNjgwMCZpZ3VpZD0wZDNlZmUxNC03NjQ3LTY0MjMtMjczYS1lZDNkNzcwMDY1NzcmaW5zaWQ9NTQ1Nw&ptn=3&ver=2&hsh=3&fclid=0d3efe14-7647-6423-273a-ed3d77006577&psq=dynamic+precision+specifier&u=a1aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvOTYyNzA3NS9keW5hbWljLWZsb2F0LWZvcm1hdC1zcGVjaWZpZXItaW4tYw&ntb=1The format specifier .precision,"%.*fint dynamicFloat = 2;printf(""%.*f\n"", dynamicFloat, z);",
+,floating point imprecision,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20126.png
+,%.2f,number,
+,type casting,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20127.png
+,unreal cast,refers to the process of safely converting or accessing objects of one type as objects of another type,
+,castconvert,int a = 42;float b = (float)a;cast integer to floatMaking a conversion,
+,examples,"For example, 3.75 is a floating-point number with an integer part (3) and a fractional part (0.75).For example, if you truncate 3.75, you'll get 3.Rounding towards Zero: Truncation always rounds towards zerotruncating -3.75 will result in -3.",
+,truncation,"La troncation avec les entiers consiste à supprimer la partie décimale d'un nombre à virgule flottante lors de sa conversion en nombre entier, sans arrondir. Elle se contente de conserver la partie entière du nombre, en arrondissant toujours vers zéro.",
+,long is integer of 64 bits.,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20128.png
+,,"• Une variable de 32 bits peut stocker jusqu'à 2^32 valeurs différentes.
+• En termes de nombres, cela signifie qu'elle peut stocker des nombres allant de -2^31 à 2^31 ((2^32)/2) pour un entier signé (c'est-à-dire positif ou négatif).",PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20129.png
+,8,1000 in binary1*2^3 =8 = (1 * 2^3) + (0 * 2^2) + (0 * 2^1) + (0 * 2^0),
+,RAM,random access memory,
+,comments,"in C we use //// Prompt user for positive integer
+// Print an n-by-n grid of bricks",
+,,"#include <stdio.h>
+#include <cs50.h>
+int main(void)
+{
+    int n;
+    do
+    {
+        n = get_int(""Size: "");
+    }
+    while (n < 1);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf(""#"");
+        }
+        printf(""\n"");
+    }
+}",
+,do while,"int main(void){    int n; // Declare variable n before the loop        // Prompt the user for the size of the square    do    {        n = get_int(""Size: "");    }    while (n < 1); // Keep prompting until a positive number is entered     // Rest of the code...}",
+,DRY,Don't repeat yourself,
+,tab,./ma=./mario,
+,up arrow,access to previous cmdcodemake./,
+,constants,,
+,const int n = 5;,const permet aux programmeurs de définir des valeurs qui sont censées rester constantes tout au long de l'exécution du programme.,
