@@ -1,0 +1,343 @@
+# Pet Groomer Simulator GDD 2025-10-14
+
+# Pet Groomer Simulator - GDD Prototype
+
+version 1.0.5 · 14 octobre 2025
+
+![pet_grooming.png](../Pet%20Groomer%20Simulator%20GDD/pet_grooming.png)
+
+---
+
+## Table of Contents
+
+1. [**Game Overview**](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)
+    1. [Mission](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)
+    2. Game Concept
+    3. Structure Core Pillars
+    4. Genre
+    5. Target Audience
+    6. Hardware Platforms
+    7. Unique Selling Proposition
+    8. Intention and Philosophy
+2. [**Gameplay and Mechanics**](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)
+    1. 3C, Camera, Character, and Controls
+    2. Mechanics and Systems (Overview)
+    3. Game Flow
+    4. Gameplay Loops
+    5. Gameplay References
+3. [**Story, Setting, and Character**](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)
+    1. Pitch
+4. [**Game Art Direction**](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)
+    1. Intention
+5. [**Audio**](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)
+    1. Adaptive Music & Transitions
+    2. Background Music (BGM)
+    3. Sound Effects (SFX)
+6. **Progression and Light Economy**
+7. **Unreal Engine 5 Implementation**
+8. **Definition of Done - Demo**
+9. **Production - Prototype Scope and Key Performance Indicators (3 Mechanics Only)**
+
+---
+
+## 1. Game Overview
+
+### 1.a Mission
+
+construire un pilier de toilettage canin réaliste et agréable, qui convainc par une boucle courte, lisible et satisfaisante. Le prototype s’intègre facilement au projet maître, sans dépendances dures, et sert de base pour la suite.
+
+### 1.b Game Concept
+
+Pitch : *[Transformez vos animaux en compagnons impeccables. Lavez, séchez, coupez dans un salon zen à la première personne, gagnez des pourboires, améliorez vos outils et faites grimper la réputation pour débloquer un salon plus élégant et plus spacieux. un avant, après toujours satisfaisant.](Pet%20Groomer%20Simulator%20GDD%202025-10-14%2028dd4ee179c380159e65d5c5b51ef19e.md)*
+
+Le jeu est une simulation à la première personne. Le joueur accueille un animal, effectue trois stations successives | Bain, Séchage, Coupe | puis remet l’animal à son propriétaire. Il reçoit un pourboire, voit la réputation du salon évoluer et progresse sans jamais subir de sanction dure. Le système privilégie des notes claires et des bonus sur ses animaux.
+
+Réussir chaque soin pour obtenir une note élevée et maximiser pourboires + paiement | investir l’argent gagné pour améliorer les stations, l’équipement, food, et débloquer des paliers de salon (plus d’espace, esthétique) | faire monter la réputation afin d’attirer plus de chiens et des races variées | Améliorer ainsi Quality + Mood + Smoothness (Attributs des animaux) pour faire tourner un salon premium, rentable.
+
+### 1.c Structure, Core Pillars
+
+Le produit complet repose sur deux piliers. 
+
+Le premier pilier couvre le toilettage, de la prise en charge au rendu final. 
+
+Le second pilier concerne l’achat et la vente d’articles pour animaux. 
+
+Le prototype se concentre uniquement sur le premier pilier.
+
+### 1.d Genre
+
+Le jeu appartient au genre de la simulation "cozy" en vue first-person, avec une micro‑gestion légère et des gestes concrets qui procurent un sentiment de maîtrise, satisfaction, mini jeu.
+
+### 1.e Target Audience
+
+Le public visé regroupe les amateurs de simulations apaisantes, les familles et les créateurs de contenu qui apprécient un avant‑après visuel fort et des boucles de jeu courtes, gratifiantes. Sentiments de calme “cozy”, collection, d’achievements.
+
+### 1.f Hardware Platforms
+
+PC sous Windows via Steam. Le prototype vise 60 images par seconde sur une configuration milieu de gamme dont rtx 2060, 3060. Le jeu prend en charge le clavier‑souris.
+
+### 1.g Unique Selling Proposition
+
+Le jeu propose un "cozy professionnel" où les gestes sont concrets, la lecture des mini jeux reste toujours claire. L’état de l’animal immédiatement compréhensible, tandis qu’un système de fluidité récompense le rythme sans instaurer de pression.
+
+### 1.h Intention and Philosophy
+
+Le design récompense sans punir. Recherche de la clarté, le confort et le contrôle dans une ambiance d’atelier zen léger bruitage distant, d’un studio bien isolé à la campagne, bruit des oiseaux. (références gameplay : Alexandra Ledermann, Nintendogs). La progression privilégie l’élégance du lieu et la qualité du ressenti plutôt qu’une accumulation de systèmes accessoires.
+
+---
+
+## 2. Gameplay And Mechanics
+
+### 2.a 3C - Camera, Character, And Controls
+
+La caméra reste en première personne avec un champ de vision de 90 pour une scène lisible. Elle applique un léger mouvement naturel et un vignettage discret lorsque l’action se prolonge, afin d’éviter la nervosité propre aux jeux de tir (inverse de doom, call of duty.) léger tremblement de caméra à chaque interaction, plus ou moins important (réussite ou échec).
+
+Le personnage ne possède pas de mesh on voit uniquement des icones ou bouton pour ses outils. Les objets avec lesquels intéragir peuvent être en 3D. Les gestes possèdent une inertie légère qui renforce l’impression de rythme avec VFX + SFX sans nuire à la précision.
+
+Les contrôles sont simples et immédiats et où légère curve d’animation avec un délai d’UI (User Interface) de 0.1 ms à 0.2 ms. Le joueur vise à la souris. Il interagit par clic. Il ouvre un menu radial, où un menu hotbar ou barre d’outils rapide, qui se parcourt avec les touches 1–9. Un bouton contextuel permet de rincer, de valider ou d’interagir. 
+
+### 2.b Mechanics And Systems (Overview)
+
+le prototype repose sur trois stations principales : Bain | Séchage | Coupe. 
+
+![Arc_ZseTjjKwgp.jpg](../Pet%20Groomer%20Simulator%20GDD/Arc_ZseTjjKwgp.jpg)
+
+![Arc_E7s8jdEF5J.jpg](../Pet%20Groomer%20Simulator%20GDD/Arc_E7s8jdEF5J.jpg)
+
+chaque station affiche des jauges, heatmaps pour guider l’action, la Quality devient la note de base liée aux soins et aux équipements utilisés sur la manche ; elle va de F à S et se convertit en pourcentage via l’équilibrage. Mood mesure le confort du chien en 1 | 2 | 3 cœurs et se traduit en Mood% selon la table d’équilibrage. Smooth exprime la fluidité des gestes en %. la formule de ce % est ensuite mappé sur une lettre S→F. un écran de résultats (post-game screen) affiche la lettre, le pourboire et les détails par station.
+
+Chaque station et ses contrôleurs s’adaptent à la taille et à la morphologie de l’animal, de sorte que le même mini-jeu fonctionne quel que soit son volume 3D. Les données du chien (taille, largeur, hauteur, CamOffset, ToolScale), combinées à l’angle de caméra choisi (vue 2D de face ou 3D), pilotent automatiquement le recadrage de la caméra, la portée des outils, à la surface de l’animal.
+
+Quality : note de base liée aux soins et aux équipements utilisés. Elle va de F à S.
+
+Mood : confort du chien affiché en 1 | 2 | 3 cœurs.
+
+Smooth : fluidité des gestes exprimée en %.
+
+Formule pour calculer les résultats = 0.6*Quality% + 0.25*Mood% + 0.15*Smooth%
+
+Hors scope du prototype, vision gestion plus avancée, un système de propriétés et de paliers de salon prépare une progression esthétique et ergonomique. L’intention est de commencer dans un salon modeste puis d’appliquer des tiers de qualité inspirés par Gran Turismo, Ichiban Holdings et NOT A HOTEL. Un selecteur définit les niveaux et leurs matériaux, tandis que la fonction ApplySalonTier() applique palette, décor et buffs légers pour les animaux, qui serait dans un meilleur environnement.
+
+![3760513-vlcsnap-2020-11-13-17h33m22s299.jpg](../Pet%20Groomer%20Simulator%20GDD/3760513-vlcsnap-2020-11-13-17h33m22s299.jpg)
+
+![image.png](../Pet%20Groomer%20Simulator%20GDD/image.png)
+
+Ichiban Holdings
+
+Gran Turismo 7
+
+Hors scope du prototype : système de food et d’équipements.
+
+### 2.c Game Flow
+
+Le joueur suit un parcours clair. Il démarre dans le hub du salon, remet en ordre la première station, puis accueille l’animal et lui attribue une étiquette nominative après un diagnostic léger. Il remet en service les trois postes et les enchaîne - bain | séchage | coupe - guidé par un cadrage de caméra qui oriente l’attention, à la manière des 4 premiers sanctuaires de The Legend of Zelda: Breath of the Wild (attention porté sur le son, sur la caméra). En fin de manche, un écran récapitulatif présente la note, le pourboire et une capture avant-après, puis le joueur revient au hub. Des aides contextuelles restent activables ou désactivables à tout moment. Le jeu ne punit jamais : il oriente, accompagne et laisse le joueur progresser à son rythme.
+
+![Arc_QrKLobJvr3.jpg](../Pet%20Groomer%20Simulator%20GDD/Arc_QrKLobJvr3.jpg)
+
+![image.png](../Pet%20Groomer%20Simulator%20GDD/image%201.png)
+
+### 2.d Gameplay Loops
+
+La boucle courte dure entre dix et vingt secondes. Chaque geste utile déclenche un trio de micro-récompenses : un effet visuel bref, un son de confirmation et une légère hausse Mood.
+
+La boucle de manche s’étend sur environ cinq minutes. Le joueur réalise les trois stations, obtient une note, perçoit un pourboire, un paiement et des récompenses variés : soins, équipement.
+
+La boucle de session fait progresser la réputation moyenne du salon et débloque des améliorations esthétiques. 
+
+Le prototype se concentre uniquement sur le premier pilier (toilettage). voir core pillars.
+
+[](https://www.notion.so)
+
+### 2.f User Interface
+
+L’esthétique s’inspire de la DA des UI avec le style Bakery Cafe et d’un design minimal Apple | Nintendo adapté à un jeu de toilettage.
+Hotbar | Barre de raccourcis
+Heatmaps | Jauges de lecture des attributs
+Menus | Navigation simple
+Style | Typo | Couleurs du texte | Taille des textes réglable
+
+### 2.g Gameplay References
+
+Animal Shelter 2 établit des stations de soin très lisibles qui cadrent immédiatement les attentes du joueur.
+
+Monster Care Simulator prouve qu’une économie simple et des objectifs clairs soutiennent la progression et la collection.
+
+Little Friends: Dogs & Cats met en scène un soin tactile, doux et apaisant qui renforce l’attachement.
+
+Hades 2 démontre un punch sonore précis et des micro-variations qui préviennent toute lassitude.
+
+Animal Crossing: New Horizons diffuse une chaleur diégétique et un soin du détail qui invitent à la contemplation.
+
+Gran Turismo inspire une montée en gamme lisible qui valorise chaque amélioration esthétique et ergonomique.
+
+Yakuza: Like a Dragon, Ichiban Holdings illustre une gestion accessible qui rend l’investissement gratifiant sans lourdeur.
+
+Not A Hotel oriente l’ambition vers un espace premium aux matériaux naturels et à la lumière soignée.
+
+## **3. Story, Setting, and Character**
+
+### 3.a Pitch
+
+### 3.1 pitch
+
+*Transformez vos animaux en compagnons impeccables. Lavez, séchez, coupez dans un salon zen à la première personne, gagnez des pourboires, améliorez vos outils et faites grimper la réputation pour débloquer un salon plus élégant et plus spacieux. un avant, après toujours satisfaisant.*
+
+---
+
+## 4. **Game Art Direction**
+
+### 4.1 intention
+
+réalisme stylisé, surfaces propres, lisibilité à deux mètres. progression esthétique du **modeste utilitaire** vers un **atelier premium** inspiré d’architecture japonaise contemporaine. : hors scope
+
+**notes de faisabilité**
+
+- shader poil par normal map ou grooming et coquilles légères: hors scope.
+- matériaux du salon
+- matériaux, des stations props
+- considérer bibliothèques existantes puis retouche: faisable en quelques jours. sur substance 3D via graph network. voir si priorité ? ou sinon prendre marketplace.
+
+## **5. Audio**
+
+### 5.a **Adaptive Music & Transitions**
+
+couches courtes, micro‑variations de hauteur, douce compression sur les réussites, ambiance feutrée. chaque action clé déclenche un motif bref mais distinct. effet hades 2
+
+### 5.b **Background Music (BGM)**
+
+- ambiance atelier calme (une piste en boucle, variation pour le mini jeu, effet transition final fantasy VII Remake, curve audio).
+
+### 5.c **Sound Effects (SFX)**
+
+- eau, mousse, jet, rinçage.
+- souffle du séchoir, vapeur légère, frisure lors de surchauffe.
+- tondeuse continue, confirmation de coupe nette.
+- mini jeu sonore référence gameplay animal crossing, fantasy life new horizons.
+- carillon de combo de fluidité, clôture de station, récapitulatif.
+
+**notes de faisabilité**
+
+- bibliothèque interne ou banques publiques, mixage simple: faisable pour un prototype. métasounds pour variations: faisable.
+- [https://elements.envato.com/fr/](https://elements.envato.com/fr/) : sons, des musiques, des icons et même de la 3D
+- [https://iconscout.com/](https://iconscout.com/) : icons
+
+## 6. Progression and Light Economy
+
+Réputation basée sur résultat (potentiellement simple jauge à la red dead redemption 2 chaque soin fait monter la jauge, basé sur l’attribut des animaux, quality smoothness mood). pourboire en fonction de la note finale. déblocages esthétiques du salon en paliers (ventilation, éclairage, matériaux). pas d’inventaire ni de stock dans le prototype.
+
+**notes de faisabilité**
+
+- réputation et pourboire: calcul simple, faisable.
+- paliers esthétiques: table de données, changement de matériaux et d’objets: hors scope.
+
+---
+
+## 7. unreal engine 5 implementation — scene, gameplay, props
+
+**scène**
+
+- carte: `Map_Proto_Salon.umap` (trois baies « bain / séchage / coupe »), éclairage simple.
+
+**contrats de programmation visuelle**
+
+- évènements communs:
+    - `StartStation(DogData)`
+    - `OnStationComplete(StationResult)`
+
+**stations (mécaniques principales)**
+
+**bain — shampouinage**
+
+- but: effacer la saleté, appliquer la mousse, rincer proprement.
+- entrées: arroser en maintenant, frotter en glissant, rincer par bouton.
+- mécanique: deux textures de rendu `RT_Dirt` et `RT_Foam` sur les coordonnées de texture du chien; un faisceau de détection échantillonne la trajectoire, peint la texture et déclenche effets visuels et effets sonores; jauge de confort (température et pression).
+- score: seuils de propreté — c soixante‑dix pour cent, b quatre‑vingt‑dix pour cent, a quatre‑vingt‑dix‑huit pour cent; malus si zones sensibles touchées.
+- livrables:
+    - blueprints: Parent : `BP_Station` Child : `BP_Station_Bath`, `BP_Station_Dry`, `BP_Station_Cut`.
+    - matériaux: `M_Dog_Body` piloté par `MPC_Station` (matrice de paramètres partagée).
+    - textures de rendu: `RT_Dirt`, `RT_Foam` (mille vingt‑quatre).
+    - effets visuels: `NS_WaterJet`, `NS_FoamBurst`, `NS_Drip`.
+    - effets sonores: `MS_WaterLoop`, `MS_ScrubShort`, `MS_RinsePop`.
+    - interface: `Widget_Watch` (humeur, confort, fluidité) et bascule de heatmap.
+
+**séchage**
+
+- but: réduire l’humidité sans surchauffer.
+- entrées: déplacer le cône d’air, régler la température.
+- mécanique: texture de rendu `RT_Wetness`; le cône réduit l’humidité; température hors plage crée frisure et malus d’humeur; bonus de fluidité en zone idéale; heatmap d’humidité visible.
+- score: seuils de sécheresse par zones et bonus de maintien bref dans la zone idéale.
+- livrables:
+    - blueprints: `BP_Station_Sechage`, `BP_Tool_Dryer`.
+    - matériaux: `M_Dog_Fur_Wet` influencé par `RT_Wetness`.
+    - texture de rendu: `RT_Wetness` (mille vingt‑quatre).
+    - effets visuels: `NS_HotAirCone`, `NS_SteamLight`.
+    - effets sonores: `MS_DryerLoop`, `MS_FizzSoft`.
+
+**coupe des poils**
+
+- but: atteindre une longueur cible tolérante par zones.
+- entrées: déplacer la tondeuse, maintenir pour couper, choisir l’entretoise de longueur.
+- mécanique: texture de rendu `RT_Length`; guides colorés; assistance d’accrochage légère; zones interdites (truffe et coussinets) pénalisées; score a si quatre‑vingt‑quinze pour cent dans la tolérance, b à quatre‑vingt‑cinq pour cent.
+- livrables:
+    - blueprints: `BP_Station_Coupe`, `BP_Tool_Clipper`.
+    - matériaux: `M_Dog_Fur_Length` lisant `RT_Length`.
+    - texture de rendu: `RT_Length` (mille vingt‑quatre).
+    - effets visuels: `NS_FurClippings`.
+    - effets sonores: `MS_ClipperLoop`, `MS_CutConfirm`.
+    - interface d’aide: guides désactivables.
+
+**mécaniques secondaires et systèmes**
+
+- humeur et confort: valeur d’humeur zéro à cent; confort issu de température, pression, trajectoire; impact sur pourboire et note.
+- fluidité et minuteur souple: enchaîner sans temps mort augmente un multiplicateur de fluidité; aucune sanction dure.
+- score et récompenses: note a à d = qualité multipliée par humeur multipliée par fluidité; pourboire en fonction de la note; photo avant / après enregistrée.
+- améliorations d’outils légères: trois modules — buse large (bain), anti‑frisure (séchage), entretoise professionnelle (coupe); stockés dans un actif de données, appliqués par étiquettes de jeu.
+
+**notes de faisabilité**
+
+- textures de rendu et peinture en temps réel: faisable et éprouvé dans unreal engine 5. ça dépend de substance 3D et du temps d’apprentissage en pratique, faisabilité besoin de tests.
+- assistance d’accrochage, heatmaps, captures photo: faisable en prototype.
+- tondeuse modifiant réellement la géométrie du poil: non nécessaire en prototype; simuler par textures et matériaux.
+
+---
+
+## 8. definition of done — demo
+
+- enchaînement jouable des trois stations. 5 min de jeu minimum et rejouable sans bug
+- User Experience clean.
+- notes S à F cohérentes.
+- jauges heatmaps visibles
+- effets visuels et effets sonores présents sur chaque action clé, placeholder possible pour mesh, sons, insérer via input variable
+- sans chevauchement agressif. son (hors scope)
+- écran de récapitulatif avec note, pourboire et photo avant / après.
+- stabilité correcte et apprentissage immédiat.
+
+---
+
+## 9. production prototype scope and key performance indicators (mechanics only)
+
+**mécaniques à mesurer pendant le test**
+
+- durée par station: bain, séchage, coupe.
+- pourcentage de couverture des heatmaps: saleté, humidité, longueur.
+- temps passé en zone de confort: température et pression.
+- fréquence des erreurs: zones sensibles touchées, frisure par surchauffe, coupes hors tolérance.
+- maintien de la fluidité: temps cumulé avec multiplicateur actif, ruptures de rythme.
+- nombre de micro‑récompenses par minute: effets visuels, sons de confirmation, hausses d’humeur.
+- compréhension de l’interface: taux d’usage de la bascule de heatmap, lisibilité perçue lors du test verbal.
+
+**rappel**: **prototype**. l’objectif est la **lisibilité** et le **ressenti** des gestes, pas l’exhaustivité des contenus.
+
+## Annexes et Références Gameplay
+
+[Monster Care Simulator [FR] Gérez un centre vétérinaire pour créatures!](https://youtu.be/qlWQ83xStG0?t=399)
+
+[GIVING ALL THE PETS in Animal Shelter 2](https://www.youtube.com/watch?v=PPemd2_K0T4)
+
+[ANIMAL SHELTER SIMULATOR 2 - Gameplay FR](https://www.youtube.com/watch?v=z4bL9CvaiGA)
+
+[Little Friends Dogs & Cats - Launch Trailer | ESRB](https://www.youtube.com/watch?v=6zjvZT-UT3g)
+
+[NOT A HOTEL: Your home in Japan](https://notahotel.com/en)
+
+[.old](Pet%20Groomer%20Simulator%20GDD%202025-10-14/old%2028dd4ee179c38177a637c443d08b46aa.md)
