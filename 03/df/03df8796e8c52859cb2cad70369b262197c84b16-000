@@ -1,0 +1,58 @@
+# Prompt Ai freelance salarie et marketplace.
+
+Date de création: October 12, 2025 1:16 AM
+
+contexte (à inclure systématiquement) :
+
+je suis matthieu huguet (zenray, @zenrayhm). compétences clés : unreal engine (ue5 ≈ 80%), blueprints, outils/ui, houdini (procedural), maya, zbrush (stylized), substance 3D Designer et painter, base en code via harvard cs50 et unreal. objectifs 2025 et contraintes : ramp d'ingress mensuel 1k→2k→3k→4k→5k puis viser 70–100k€/an ou un gros succès jeu, mais après 1 ans de tentative, volonté de réduire le risque d'avoir de meilleurs métrique KPI, compte linkedin, revenus réccurents; deadline déménagement au japon : idéal, ferme le 25 déc 2025 : volonté d'être au rendez vous de sa vie, pas bloqué chez ma mère ou ma grand mère malgré énorme potentiel intellectuel ; besoin de connexions via les autres, partenariats ; cible jlpt n2 ; style : artisan-operator, technicien anti perfectionnisme, isolation à contrer. canaux actuels : linkedin, Only je n'ai pas le temps pour ces autres plateformes malt, upwork, unreal marketplace, gumroad, artstation. répartition horaire cible : ~56h/semaine ACTUELLEMENT idéalement 21 a 28 h. freelance/consulting aucune confiance et surtout pas un portfolio suffisant, chaine youtube 10k compte linkedin 10k peut faire office de crédibilité. et ou portfolio solide., Volonté de crafter un plan qui permet d'améliorer sa vie. impératif : ship > perfect, 80/20, kaizen + kaikaku.
+
+objectif du prompt :
+
+ne pas fournir une stratégie incomplète maintenant. produire un questionnement structuré, critique et argumenté qui guide vers la décision entre modèles de monétisation au dela du simple guide. (freelance vs salarié vs hybrides orientés jeu indé), en mettant l'accent sur vitesse de revenu, coût d'opportunité, scalabilité et alignement avec mes contraintes personnelles (déménagement, perfectionnisme, temps disponible). Implémentation du japonais dans la boucle d'action quotidienne ainsi que des moments de repos: jeux vidéos, lectures, vidéos youtube, films, anime. Si pas le temps besoin de conserver absolument jeux vidéos et anime pour la puissance créative, testostéronne, dopamine, sérotonine. Besoin d'implémenter au moins un jour sur 2 40 min de sport. Main Pillars Developpement de jeux vidéos, Japonais, Sport.
+
+instructions précises pour l'assistant qui reçoit ce prompt :
+
+1) format de sortie demandé : une liste de questions prioritaires (12–20), Un guide détaillé. regroupées par thème (stratégie business, marché jeu indé, produit/service, distribution/ventes, finances, opérations/temps, risques/psychologie). chaque question doit être suivie d'une brève justification de 1–2 phrases expliquant pourquoi elle est cruciale et quelle hypothèse elle teste. ne pas donner de réponses ou de plans détaillés.
+
+2) priorisation : marquer les 6 questions les plus décisives (high-impact, low-cost pour tester).
+
+3) hypothèses clés : lister 6–8 hypothèses critiques (ex. «les studios indés paient 400€/jour pour tech-art contractor», «un asset pack réaliste peut générer 2–3 ventes/mois sur unreal marketplace») et proposer pour chaque hypothèse une expérience simple à exécuter en ≤2 semaines pour la valider, avec métrique de succès précise.
+
+4) options à comparer (ne pas développer les plans, juste poser les questions qui discriminent) :
+
+- modèle a : freelance pur (consulting long missions + micro-gigs)
+
+- modèle b : salarié (contrat temps plein ou mi-temps technique/tech-art)
+
+- modèle c : productized + marketplace (assets/tools + support + consulting à l'occasion)
+
+pour chaque modèle, formuler 4 questions qui permettent d'évaluer : a) vitesse de revenus initiaux, b) stabilité, c) scalabilité passive, d) alignement avec déménagement au japon et horaire cible.
+
+5) critères d'arbitrage : proposer une check-list de 8 critères quantifiables pour comparer les modèles (ex. revenu mensuel médian attendu, tps avant premier paiement, probabilité d'atteindre 2k/mois en 3 mois, charges/coût de vie, risque d'épuisement, besoin d'infrastructure/contrat, effort marketing, dépendance à clients uniques).
+
+6) expériences rapides (3) : proposer trois micro-expériences concrètes à lancer cette semaine ou dans les 14 jours (ex. message ciblé sur linkedin + offre micro-prestation, mise en ligne d'un mini asset pack gratuit + upsell, candidature à 3 annonces temps partiel), mais ici uniquement sous forme de questions et hypothèses à valider, pas d'instructions pas-à-pas.
+
+7) gardes-fous contre le perfectionnisme : poser 5 questions/action prompts qui obligent à définir un seuil minimal de livraison (definition du mvp, critères de release, règle de temps maximum par itération).
+
+8) métriques et benchmarks à rechercher : lister 10 chiffres / sources à vérifier sur le marché (ex. taux journalier moyen tech-art UE5 freelance en france/jp, revenu moyen d'un asset pack top 10 sur unreal marketplace, conversion linkedin cold→meeting), et pour chaque indiquer comment obtenir vite la donnée (où chercher, qui contacter).
+
+9) questions de cadrage à me poser maintenant (au maximum 1 question si une précision est strictement nécessaire) — sinon ne poser aucune et continuer le questionnement.
+
+10) ton et format : en français, style concis mais argumenté, lower-case, direct, challenger, sans donner de recommandations définitives. toujours ≥3 options pour éviter narrow framing. intégrer des références culturelles jp pragmatiques quand pertinentes (ex. ikigai ↔ alignement produit/marché/valeurs, wabi-sabi ↔ accepter l'imperfection).
+
+livrable attendu du modèle quand j'utiliserai ce prompt :
+
+- une liste hiérarchisée de questions + justifications (aucune réponse complète).
+- une courte section « hypothèses critiques » avec expériences associées et métriques de succès.
+- une section « benchmarks à vérifier » (top 10).
+- une mini-checklist « stop-perfection » (5 points).
+
+aucune conclusion tranchée, aucune roadmap complète, aucune exécution automatique.
+
+contrainte finale :
+
+ne pas remplacer le questionnement par des solutions. l'objectif est de me forcer à décider par testing rapide et itératif, pas par analyse parfaite. adresser toujours mes préférences mémorisées (tempo 90/20, répartition horaire, deadlines japon, canaux existants).
+
+fin du prompt.
+
+Ne pas overkill la sortie de l'output fournir une réponse facile à appliquer, facile à mettre en oeuvre, dès maintenant sukoshi zutsue; on avance petit à petit et on récolte dès maintenant ce qui peut l'être en combinant ; business, stratégie, psychologie, knowledge de livres, informatique, automatisation, bref ce qui se fait de mieux pour réussir dès maintenant petit à petit, étapes par étapes.
