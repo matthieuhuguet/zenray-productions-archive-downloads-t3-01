@@ -1,0 +1,187 @@
+#!/usr/bin/env python3
+"""
+Volet qui grince — sound design pro.
+
+Architecture en 4 couches :
+  1. Corps grave (poids du volet en mouvement, 70 Hz + sub)
+  2. Stick-slip events (frottement physique : accrochage/glissement irrégulier
+     qui excite un résonateur métallique inharmonique)
+  3. Friction continue (bruit blanc filtré biquad bandpass, fréq variable)
+  4. Claquement final (impulsion qui excite modes basses fréquences)
+
+Stéréo 48 kHz, soft-clip waveshaping, ADSR par couche.
+"""
+import wave
+import struct
+import math
+import os
+import random
+
+SR = 48000
+DUR = 5.0
+N = int(SR * DUR)
+OUT = os.path.expanduser('~/Downloads/scream.wav')
+
+random.seed(7)
+
+
+def env_adsr(t, attack_start, attack_end, release_start, release_end):
+    """Enveloppe trapézoïdale simple."""
+    if t < attack_start or t > release_end:
+        return 0.0
+    if t < attack_end:
+        return (t - attack_start) / (attack_end - attack_start)
+    if t < release_start:
+        return 1.0
+    return (release_end - t) / (release_end - release_start)
+
+
+# ---------- Buffers stéréo ----------
+L = [0.0] * N
+R = [0.0] * N
+
+
+# ---------- Couche 1 : Corps grave ----------
+for i in range(N):
+    t = i / SR
+    e = env_adsr(t, 0.3, 0.8, 3.5, 4.7)
+    if e == 0.0:
+        continue
+    freq = 70 + 15 * math.sin(0.7 * t)
+    sig = math.sin(2 * math.pi * freq * t) + 0.5 * math.sin(math.pi * freq * t)
+    L[i] += sig * e * 0.18
+    R[i] += sig * e * 0.18
+
+
+# ---------- Couche 2 : Stick-slip events + résonateur métallique ----------
+# Modes inharmoniques d'une plaque/charnière métallique (ratios non entiers)
+modes = [
+    (240, 0.10, 1.0),
+    (662, 0.07, 0.65),
+    (1296, 0.045, 0.45),
+    (2143, 0.030, 0.30),
+    (3210, 0.020, 0.20),
+]
+
+# Génère des events de stick-slip avec densité variable (Poisson non-homogène)
+events = []
+t = 0.4
+while t < 4.4:
+    if t < 1.0:
+        rate = 8
+    elif t < 3.6:
+        rate = 22 + 12 * math.sin(2 * math.pi * 0.6 * t)
+    else:
+        rate = 12
+    dt = -math.log(random.random() + 1e-9) / max(rate, 1)
+    t += dt
+    if t < 4.4:
+        amp = 0.4 + 0.6 * random.random()
+        pan = random.uniform(-0.5, 0.5)
+        events.append((t, amp, pan))
+
+for ev_t, ev_amp, ev_pan in events:
+    start = int(ev_t * SR)
+    pitch_var = 1.0 + random.uniform(-0.12, 0.12)
+    left_gain = math.cos((ev_pan + 1) * math.pi / 4)
+    right_gain = math.sin((ev_pan + 1) * math.pi / 4)
+    for f0, decay, mamp in modes:
+        f = f0 * pitch_var
+        phase = random.uniform(0, 2 * math.pi)
+        length = min(int(decay * 6 * SR), N - start)
+        if length <= 0:
+            continue
+        two_pi_f = 2 * math.pi * f
+        for j in range(length):
+            idx = start + j
+            tt = j / SR
+            env_e = math.exp(-tt / decay)
+            sig = math.sin(two_pi_f * tt + phase) * env_e * mamp * ev_amp * 0.13
+            L[idx] += sig * left_gain
+            R[idx] += sig * right_gain
+
+
+# ---------- Couche 3 : Friction (bruit blanc -> biquad bandpass variable) ----------
+# État du filtre biquad par canal
+xL1 = xL2 = yL1 = yL2 = 0.0
+xR1 = xR2 = yR1 = yR2 = 0.0
+
+for i in range(N):
+    t = i / SR
+    e = env_adsr(t, 0.5, 1.1, 4.0, 4.6)
+    if e == 0.0:
+        # Avance quand même les états du filtre pour éviter clicks
+        continue
+
+    intensity = 0.4 + 0.6 * abs(math.sin(2 * math.pi * 0.45 * t))
+    center = 2500 + 1100 * math.sin(2 * math.pi * 0.28 * t + 1.3)
+
+    Q = 9
+    omega = 2 * math.pi * center / SR
+    sin_w = math.sin(omega)
+    cos_w = math.cos(omega)
+    alpha = sin_w / (2 * Q)
+
+    a0 = 1 + alpha
+    b0 = alpha / a0
+    b2 = -alpha / a0
+    a1 = -2 * cos_w / a0
+    a2 = (1 - alpha) / a0
+
+    xL = (random.random() - 0.5) * 2
+    xR = (random.random() - 0.5) * 2
+
+    yL = b0 * xL + b2 * xL2 - a1 * yL1 - a2 * yL2
+    yR = b0 * xR + b2 * xR2 - a1 * yR1 - a2 * yR2
+
+    xL2, xL1 = xL1, xL
+    yL2, yL1 = yL1, yL
+    xR2, xR1 = xR1, xR
+    yR2, yR1 = yR1, yR
+
+    L[i] += yL * e * intensity * 0.42
+    R[i] += yR * e * intensity * 0.42
+
+
+# ---------- Couche 4 : Claquement final ----------
+slam_modes = [
+    (88, 0.45, 1.0),
+    (205, 0.18, 0.6),
+    (478, 0.09, 0.4),
+    (915, 0.05, 0.3),
+]
+slam_start = int(4.42 * SR)
+for f0, decay, mamp in slam_modes:
+    length = min(int(decay * 6 * SR), N - slam_start)
+    two_pi_f = 2 * math.pi * f0
+    for j in range(length):
+        idx = slam_start + j
+        tt = j / SR
+        e = math.exp(-tt / decay)
+        sig = math.sin(two_pi_f * tt) * e * mamp * 0.55
+        L[idx] += sig
+        R[idx] += sig
+
+
+# ---------- Mix final : soft-clip + master ----------
+def soft_clip(x):
+    # tanh approx (waveshaping doux)
+    if x > 1.5: x = 1.5
+    elif x < -1.5: x = -1.5
+    return x - (x ** 3) / 3.0
+
+
+with wave.open(OUT, 'w') as wav:
+    wav.setnchannels(2)
+    wav.setsampwidth(2)
+    wav.setframerate(SR)
+    GAIN = 0.85
+    for i in range(N):
+        l = soft_clip(L[i]) * GAIN
+        r = soft_clip(R[i]) * GAIN
+        li = max(-32768, min(32767, int(l * 32767)))
+        ri = max(-32768, min(32767, int(r * 32767)))
+        wav.writeframes(struct.pack('<hh', li, ri))
+
+print(f"✓ {OUT}")
+print(f"  {DUR}s, stéréo 48kHz, {len(events)} stick-slip events")
