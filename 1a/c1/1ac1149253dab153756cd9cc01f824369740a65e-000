@@ -1,0 +1,12 @@
+# Convention de nommage adapté à mes préférences 2025 snake_case = variables + files data | PascalCase_Underscore = Classes, Fonctions, Nodes / Assets
+
+Created: January 28, 2025 9:40 AM
+Update: January 28, 2025 9:42 AM
+
+| **Élément** | **Convention** | **Exemple** |
+| --- | --- | --- |
+| **Variables** | `snake_case` | `current_health`, `is_jumping` |
+| **Fichiers/Textures** | `snake_case` | `character_model_v01.fbx`, `albedo_texture.tga` |
+| **Classes/Blueprints** | `PascalCase_Underscore` | `Player_Character`, `Weapon_System` |
+| **Fonctions** | `PascalCase_Underscore` | `Calculate_Damage()`, `Get_Data()` |
+| **Nodes/Assets** | `PascalCase_Underscore` | `Rig_Controller`, `Ocean_Simulation` |
