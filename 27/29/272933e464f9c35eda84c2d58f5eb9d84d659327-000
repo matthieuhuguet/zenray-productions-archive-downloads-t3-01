@@ -1,0 +1,36 @@
+# Blender_Maya_Setup
+
+Created: June 17, 2025 10:21 AM
+
+Maya Accept les fill svg mais pas les strokes
+
+![image.png](Blender_Maya_Setup/image.png)
+
+![image.png](Blender_Maya_Setup/image%201.png)
+
+Curves to Surfaces 
+
+Polygons Output 
+
+très pratique
+
+![image.png](Blender_Maya_Setup/image%202.png)
+
+![image.png](Blender_Maya_Setup/image%203.png)
+
+Quite close juste typing 1.618
+
+![image.png](Blender_Maya_Setup/image%204.png)
+
+Scaling a number = 1.618
+
+Create ruler : 
+
+![image.png](Blender_Maya_Setup/image%205.png)
+
+If not working
+
+Create SVG Mesh
+
+- In Illustrator, select your art.
+- `Object > Path > Outline Stroke`
