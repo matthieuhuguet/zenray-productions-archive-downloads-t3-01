@@ -1,0 +1,17 @@
+# Transfer Motion to Stylized Character CC UE Control Rig
+
+![image.png](Transfer%20Motion%20to%20Stylized%20Character%20CC%20UE%20Contro/image.png)
+
+[https://www.youtube.com/watch?v=TrxBXlnEg9k](https://www.youtube.com/watch?v=TrxBXlnEg9k)
+
+Face Mocap
+
+[https://www.youtube.com/watch?v=jHj8m5p1UQ0](https://www.youtube.com/watch?v=jHj8m5p1UQ0)
+
+| **Étape** | **Description** |
+| --- | --- |
+| **1. Rig le character** | Exporte le personnage depuis **Character Creation 4** avec le rig adapté pour Unreal Engine. |
+| **2. Setup des plugins** | Active et configure tous les plugins nécessaires dans Unreal (ex. **Control Rig**, **Live Link**, Metahumans SDK etc.). |
+| **3. Importer un Metahuman** | Crée ou importe un **Metahuman** pour intégrer les données faciales et l'animation. Via Audio Driven ou performance Iphone. |
+| **4. Data de face** | Associe les données de capture faciale (ex. via iPhone ou autre appareil) avec le Metahuman. |
+| **5. Copier et Bake** | Copie l'animation faciale sur le personnage, puis utilise la fonction **Bake** pour finaliser les animations. |
