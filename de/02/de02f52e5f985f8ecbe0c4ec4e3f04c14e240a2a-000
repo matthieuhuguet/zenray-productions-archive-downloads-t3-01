@@ -1,0 +1,14 @@
+﻿Name
+Vertical Tiling for patterns
+Inheritance method
+X = invert the connections
+"Max Lighten Permet de bien faire en sorte de merge deux fils par exemple : "
+Placer ou distordre des éléments : Shape Mapper | Splatter Circular : Répéter une forme de manière circulaire.
+Primary Input is always the Background : Pour utiliser L’alpha il faut toujours garder le background comme pattern le plus important et ajouter le détails sur foreground en Multiply
+Ben Wilson Donne Gratuitement des nodes pour Substance Designer
+Alt to add a new dot in connections + EN appuyant sur Alt on peut aller récupérer les autres connections. Très intéressant.
+Recap Practicing
+Tile Sampler Scale Multiplier With Perlin Noise.
+The Scale Got Resized Dynamicly By The Perlin Noise
+On Ajoute le Mask au niveau du Mask Input ou du Scale Multiplier ajuster à 1 pour voir le résultat.
+Flood Fill Hyper Utile pour récupérer un Mask
