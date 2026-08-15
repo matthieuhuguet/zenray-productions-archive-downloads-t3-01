@@ -1,0 +1,164 @@
+# Project Titan Building
+
+Author: Simon Houdini
+Status: Dropped / Half Done
+
+![image.png](Project%20Titan%20Building/image.png)
+
+# Create Buildings
+
+https://www.sidefx.com/titan/
+
+![image.png](Project%20Titan%20Building/image%201.png)
+
+# 1 | Use the Labs Building Tool
+
+Learn how to use the SideFX Labs Building tool. This node is at the core of the Titan Building tool. Learn how to use it and how to set up custom inputs and models. The building tool works on a patterns based system that you can use to define how models are placed.
+
+<aside>
+<img src="https://www.notion.so/icons/arrow-down_lightgray.svg" alt="https://www.notion.so/icons/arrow-down_lightgray.svg" width="40px" />
+
+- Notes Courses
+    
+    **Labs Building Generator Utility**
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image.png)
+    
+    Configurer grid et match size pour orienter la flèche orange vers l’extérieur.
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%201.png)
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%202.png)
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%203.png)
+    
+    Module Name = A
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%204.png)
+    
+    Module A, B & Floor With Variation
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%205.png)
+    
+    Remove module C to Keep A & B only Orange and Green.
+    
+    Different Pattern Made With Simple Inset and Extrusion
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%206.png)
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%207.png)
+    
+    <Plusieurs A>[Un Seul B]<Plusieurs A>
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%208.png)
+    
+    Fin de la première partie.
+    
+</aside>
+
+# 2 | Create Digital Asset
+
+Learn how to make a Digital Asset out of the setup. This will generate one single node that can be used in Houdini to generate buildings. You will also make a custom interface with parameters so you can control the results.
+
+- Notes Courses
+    
+    How to launch Houdini : 
+    
+    1. Block FireWall
+    2. Launch Crack Path Daemon Wait
+    3. Try to relaunch
+    4. Launch sesinetd.exe
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%209.png)
+    
+    Revoir la vidéo bien comprendre le digital asset et passer à la partie 3
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2010.png)
+    
+    Construction du Digital Asset.
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2011.png)
+    
+    Copy to points.
+    
+    Installing the plugins
+    
+    [Installing the Plugins Houdini Engine](../../Components%20Old/softwares_learning/Houdini/Learning%20List/Installing%20the%20Plugins%20Houdini%20Engine%203cbbe6e8f0704e6382ea3031c01b48ee.md) 
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2012.png)
+    
+    Save HDA
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2013.png)
+    
+    Start Session Sync Houdini
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2014.png)
+    
+    [Start Session Sync Houdini](../../Components%20Old/softwares_learning/Houdini/Learning%20List/Start%20Session%20Sync%20Houdini%20d1858be8a09d44fcbf01cce32797b7e8.md) 
+    
+    Wait the rebuild from the old method.
+    
+    Problème à résoudre, incompatibilité entre Unreal 5.4.4 et Houdini Apprentice. Trouver une version Houdini 
+    
+    itérer le blockout sur Unreal Engine. 
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2015.png)
+    
+    Je peux me concentrer sur la 3D dites classique pour l’instant, en me concentrant, et je verrai les effets VFX etc plus tard avec Houdini ? Si l’intérêt est de me focus 
+    
+    Ouais mais non le côté procédural d’Houdini est indispensable.
+    
+    Peut être utilisé sur la version 5.1 d’Unreal.
+    
+    ![image.png](../../Components%20Old/portfolio/Portfolio%202023/COURSES%203D%20&%20PROGRAMING%20Part%20II%201/image%2016.png)
+    
+
+# 3 | Open Building Tool in Unreal
+
+Learn how to make the Titan Building tool work for Unreal. After creating the Digital Asset it can be opened in Unreal. To get the most out of the solution, there will be changes made to set up instancing. At the end of the video you will have your first version of a building in the game engine.
+
+<aside>
+<img src="https://www.notion.so/icons/book_lightgray.svg" alt="https://www.notion.so/icons/book_lightgray.svg" width="40px" />
+
+Save modifications of HDA 
+
+![image.png](Project%20Titan%20Building/image%202.png)
+
+![image.png](Project%20Titan%20Building/image%203.png)
+
+Finally in Unreal Fix Issues 
+
+![image.png](Project%20Titan%20Building/image%204.png)
+
+Fix with reverse face 
+
+</aside>
+
+- [ ]  4 | Add Support for Data Tables
+
+Learn how to use data tables with the building tool. This will make the tool more flexible since data tables are used to get all models in the project. Data tables are useful for larger sets of data, like multiple modular meshes of the walls.
+
+- [ ]  5 | Create Base Roof Setup
+
+Learn how to create a base roof geometry on the buildings. Next you will see how you could create a roof. You will start by making a basic roof that would work in multiple situations.
+
+- [ ]  6 | Improve Roofs
+
+Learn how to add more variation and style options to the roof. The tools will take the base roof geometry from the last lesson then enhance it to let the tool choose a different variation. This has the potential to create many variations and styles.
+
+- [ ]  7 | Final Tweaks for Unreal
+
+Learn how to use the final Titan Building tool in Unreal. The tool is almost ready and here you will see a couple settings that need to be changed. This can go from doing some cleanup such as adding snapping or checking if the correct attributes are set on the roofs.
+
+### Game Assets
+
+[Creating Assets & Architecture for Game Environments  | The Gnomon Workshop](https://www.thegnomonworkshop.com/tutorials/creating-assets-architecture-for-game-environments)
+
+### Concept Art
+
+[Creating Environment Concept Art for Games | The Gnomon Workshop](https://www.thegnomonworkshop.com/tutorials/creating-environment-concept-art-for-games)
+
+Zbrush
+
+Unreal
