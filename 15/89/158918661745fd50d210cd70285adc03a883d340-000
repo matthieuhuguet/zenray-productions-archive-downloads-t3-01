@@ -1,0 +1,192 @@
+# 19 Février 2026
+
+![Capture d'écran 2026-02-19 233109 (Large).png](19%20F%C3%A9vrier%202026/4751623f-1d62-4a04-a074-2c04fd57cf7b.png)
+
+Grunge 007 vraiment stylée
+
+![image.png](19%20F%C3%A9vrier%202026/image.png)
+
+![image.png](19%20F%C3%A9vrier%202026/image%201.png)
+
+Putain let’s go 
+
+![Capture d'écran 2026-02-19 220634 (Large).png](19%20F%C3%A9vrier%202026/Capture_dcran_2026-02-19_220634_(Large).png)
+
+C’est quand même joli 
+
+En vrai c’est worth car rien ne bat ça.
+
+![image.png](19%20F%C3%A9vrier%202026/image%202.png)
+
+Magnifique Node :  Get Slope. 
+
+Et intallé dans le dossier ressource, la partager.
+
+![image.png](19%20F%C3%A9vrier%202026/image%203.png)
+
+- [x]  Finir le texturing Tutoriel avec bonne gestion du temps.
+- [ ]  Publier Substance Designer Asset. Publier 4 socials.
+- [ ]  Pas encore parfait mais déjà très intéressant !
+
+![Capture d'écran 2026-02-19 171237 (Large).png](19%20F%C3%A9vrier%202026/Capture_dcran_2026-02-19_171237_(Large).png)
+
+- [ ]  Publier Site
+- [ ]  Publier Video
+
+go go go!
+
+Partant du principe que ClaudeCode fait le job que devient l’agency des humains ?
+
+S’occuper de sa santé pour vivre longtemps : Sport / Alimentation / Gestion du Stress
+
+Corriger / Orienter le travail de l’AI, après y’a encore beaucoup de limites mais bon.
+
+```jsx
+Continue ce travail fais petit pas par petit pas pour avancer sans consommer tout le crédit d'un seul coup ! 
+
+Continue d'améliorer le plugin substance designer mcp : Continue d'améliorer le plugin avec toutes (oui toutes) la documentation inclues dans le plugins fetch toutes les pages et il faudrait pouvoir le call via un mcp_tool type list_documentation ou better naming pour avoir toutes les possibilités émergentes dans la conscience du plugin mcp pour avoir des possibilités infinies énorme travail donc go. tu as actuellement la doc ici : https://helpx.adobe.com/substance-3d-designer/home.html dis moi si tu peux accéder à toutes les pages. continue de complèter. le plugin. en interne on pushera plus tard. go
+
+Read 3 files, used a tool
+
+Read 3 files, used a tool
+
+Claude in Chrome: Tabs Context
+
+No Chrome extension connected.
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+<tool_use_error>Sibling tool call errored</tool_use_error>
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+Read 100 lines
+
+Show 1 more
+
+Avant de me lancer dans un travail énorme, je dois d'abord vérifier l'accès à la documentation Adobe.
+
+Launched two async agents to fetch Substance 3D Designer documentation data
+
+Launched two async agents to fetch Substance 3D Designer documentation data
+
+WebFetchhttps://helpx.adobe.com/substance-3d-designer/home.html
+
+# Substance 3D Designer Documentation StructureBased on the navigation hierarchy provided, here's the complete documentation organization:
+
+Show more
+
+WebFetchhttps://helpx.adobe.com/substance-3d-designer/substance-graphs/nodes-reference-for-substance-graphs.html
+
+Request failed with status code 404
+
+WebFetchhttps://helpx.adobe.com/substance-3d-designer/substance-graphs/nodes-reference.html
+
+Request failed with status code 404
+
+Show 7 more
+
+Je commence à analyser la structure du plugin existant pendant que les agents fetchen la doc.
+
+Read Adobe Substance 3D Designer plugin initialization file sections
+
+Read Adobe Substance 3D Designer plugin initialization file sections
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+Read 200 lines
+
+BashGet-Item "C:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py" | Select-Object Length
+
+Exit code 127/usr/bin/bash: line 1: Get-Item: command not found/usr/bin/bash: line 1: Select-Object: command not found
+
+Bashwc -l "C:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py" 2>/dev/null || echo "Cannot count"
+
+2206 C:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+Show 3 more
+
+Je vais lire le reste du plugin pour comprendre tous les handlers existants, et en parallèle vérifier quelles pages de doc sont accessibles.
+
+Read Python plugin initialization file error handling section
+
+Read Python plugin initialization file error handling section
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+Read 300 lines
+
+WebFetchhttps://helpx.adobe.com/substance-3d-designer/substance-graphs/nodes-reference.html
+
+Request failed with status code 404
+
+WebFetchhttps://helpx.adobe.com/substance-3d-designer/substance-graphs/nodes-reference/atomic-nodes.html
+
+Request failed with status code 404
+
+Show 2 more
+
+Je commence à avoir une bonne vision du plugin. Laissez-moi tester les URLs de doc qui marchent vraiment, et lire le reste du plugin.
+
+Reviewed Adobe Substance 3D Designer documentation and examined Python plugin initialization code
+
+Reviewed Adobe Substance 3D Designer documentation and examined Python plugin initialization code
+
+WebFetchhttps://helpx.adobe.com/substance-3d-designer/getting-started/overview.html
+
+# Substance 3D Designer - Overview Page Content## Main Content
+
+Show more
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+Read 300 lines
+
+Je vois maintenant la structure complète du plugin. Maintenant, faisons l'essentiel : vérifier quelles URLs de doc fonctionnent vraiment et planifier la nouvelle feature list_documentation.
+
+Launched async agent to discover Adobe Substance 3D Designer documentation URLs
+
+Launched async agent to discover Adobe Substance 3D Designer documentation URLs
+
+Show more
+
+Pendant que les agents cherchent les URLs qui fonctionnent, je vais concevoir et implémenter la feature list_documentation. L'idée centrale : construire une base de connaissance interne directement dans le plugin — tout ce qu'on sait sur les nodes SD (ports, paramètres, types, descriptions) — accessible via un outil MCP list_documentation. Ça ne dépend pas du serveur Adobe.
+
+Read Adobe Substance 3D Designer plugin initialization and recipe system files
+
+Read Adobe Substance 3D Designer plugin initialization and recipe system files
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\__init__.py
+
+Read 200 lines
+
+ReadC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\recipes.py
+
+Read 50 lines
+
+J'ai maintenant une image complète. Je vais créer le fichier sd_documentation.py — une base de connaissance complète intégrée — et ajouter l'outil list_documentation au plugin. C'est la vraie valeur ajoutée : toute la connaissance SD accessible via MCP, sans dépendre d'URLs Adobe.
+
+Created SD MCP documentation knowledge base file
+
+Created SD MCP documentation knowledge base file
+
+Update Todos
+
+ Creating sd_documentation.py knowledge base
+
+ Add list_documentation handler to __init__.py
+
+ Add list_documentation to bridge sd_mcp_bridge.py
+
+ Update plugin version to 3.3.0
+
+WriteC:\Users\matth\Documents\Adobe\Adobe Substance 3D Designer\python\sduserplugins\sd_mcp_plugin\sd_documentation.py
+
+You've hit your limit · resets 7pm (Europe/Paris)
+
+You've hit your limit · resets 7pm (Europe/Paris)
+
+You've hit your limit · resets 7pm (Europe/Paris)
+
+Normalement tu as déjà pas mal de fichier en mémoire. pas besoin de tout relancer. utilise l'existant.
+```
