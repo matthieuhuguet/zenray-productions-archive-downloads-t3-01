@@ -1,0 +1,18 @@
+# Notation de l’event construct ou construction script
+
+Created: December 28, 2024 10:58 PM
+
+AFireAttackSystem::AFireAttackSystem()
+{
+PrimaryActorTick.bCanEverTick = true; // Permet à cet acteur d'exécuter la fonction Tick()
+
+```
+// Initialisation des stats
+DummyHP = 100.0f;       // PV du dummy
+FireResistance = 0.3f;  // Résistance au feu
+
+```
+
+}
+
+![image.png](Notation%20de%20l%E2%80%99event%20construct%20ou%20construction%20scri/image.png)
