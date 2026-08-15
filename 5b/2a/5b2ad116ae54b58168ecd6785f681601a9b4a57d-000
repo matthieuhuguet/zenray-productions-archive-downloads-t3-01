@@ -1,0 +1,4 @@
+# Untitled
+
+: castconvert
+ 1: int a = 42;float b = (float)a;cast integer to floatMaking a conversion
