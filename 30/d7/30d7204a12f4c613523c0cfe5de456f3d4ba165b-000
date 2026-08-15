@@ -1,0 +1,54 @@
+# Continuer D’améliorer UIDisplay
+
+Commencer à intégrer les autres jeux : 
+
+"E:\Create\Build\PortfolioShare\2026-03\2026-03-15_UIDisplay\docs\ref\RedDeadRedemption2"
+"E:\Create\Build\PortfolioShare\2026-03\2026-03-15_UIDisplay\docs\ref\TheLegendOfZeldaBreathOfTheWild"
+
+L'export "Save as" est toujours cassé. Je ne vois aucune fenêtre de dialogue, aucune fenêtre d'input, I/O, output qui me permette de sauvegarder l'image.
+
+Certains composants sont encore cassés, comme les barres de vie, etc.
+
+Je ne veux absolument pas que tu me mettes des SVG que tu aurais créés toi-même, parce que tu ne sais pas le faire et enfin certaines images. Certaines images dans la preview sont bien faites, mais lorsque je clique dessus, ce n'est pas exactement la même image qui ressort. Du coup, c'est très frustrant pour l'utilisateur, donc j'aimerais que tu corriges tout ça.
+
+En fait, tu as juste à vérifier si les presets donnent l'image. Là, je vois que tu as 66 presets, mais ce n'est pas possible, puisque il y a 77 images et que je t'ai demandé de faire en sorte que toutes les images soient interagissables pour pouvoir cliquer dessus.
+
+Donc tu devras avoir au moins 77 images, plus tous les multi-components qui ont été découpés depuis toutes les autres images. Donc ça fait vraiment beaucoup de composants à créer.
+
+L'export est toujours bugué et ne me permet pas d'avoir des images JPEG exportées, et du coup c'est très frustrant pour l'utilisateur. Donc essaye de corriger ça et ce sera bien.
+
+Show less
+
+Laisse-moi d'abord diagnostiquer les vraies causes racines avant de toucher au code :
+
+Counted 122 ghost-of-yotei preset definitions in presetStore.ts
+
+Counted 122 ghost-of-yotei preset definitions in presetStore.ts
+
+J'ai la vue complète. Il y a **77 images de référence GoY** mais seulement une partie a été cropée. Les causes racines sont claires :
+
+1. **Export cassé** → Pas de fichier `capabilities/` dans Tauri v2 → les plugins `dialog` et `fs` sont bloqués
+2. **Mismatch thumbnail/canvas** → Les presets GoY avec types programmatiques (health_bar etc.) montrent un crop en thumbnail mais rendent un composant React généré en canvas
+3. **27 images jamais traitées** → Elles existent en ref mais ont zéro crop + zéro preset
+4. **Tous les presets GoY doivent utiliser `type:'image'`** → Règle absolue : pas de SVG/React généré pour GoY
+5. Faire en sorte d’avoir une preview dans l’export.
+
+Je règle tout ça :
+
+Created Tauri capabilities configuration file
+
+Created Tauri capabilities configuration file
+
+Maintenant le script Python pour les 27 images manquantes + crops granulaires :
+
+Generated missing Game of Yarns crop images successfully
+
+Generated missing Game of Yarns crop images successfully
+
+59 nouveaux crops, 144 total. Maintenant je corrige tout en une seule passe massive :
+
+You've hit your limit · resets 4pm (Europe/Paris)
+
+You've hit your limit · resets 4pm (Europe/Paris)
+
+You've hit your limit · resets 4pm (Europe/Paris)
