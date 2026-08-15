@@ -1,0 +1,12 @@
+﻿Asset,Modeling,Texturing,Shader,InScene,Priority,Notes
+Grass,DONE,DONE,DONE,YES,DONE,Procedural system VAT 3.0
+Alligator,DONE,DONE,DONE,YES,DONE,ZBrush
+ChurchStairs,DONE,DONE,DONE,YES,DONE,
+ChurchMain,DONE,TODO,WIP,YES,HIGH,Needs wood texture
+ChurchEntrance,DONE,TODO,WIP,YES,HIGH,Match ChurchMain style
+Trees,DONE,TODO,TODO,YES,HIGH,SpeedTree bark + leaf tex
+Ground,DONE,WIP,WIP,YES,MED,Needs mud/dirt detail
+WaterGround,DONE,WIP,WIP,YES,MED,Underwater ground visible
+TreeStump,DONE,TODO,TODO,YES,MED,Bark texture needed
+Fern,DONE,WIP,WIP,YES,LOW,Functional needs polish
+Palmetto,DONE,WIP,WIP,YES,LOW,Functional needs polish
