@@ -1,0 +1,37 @@
+﻿Titre,UV mappings,Property,Fichiers
+,UV mapping,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2084.png
+,Texture Paint,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2085.png
+,shader blender,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2086.png
+,shift a or tab,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2087.png
+,Join areas in blender,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2088.png
+,Assign texture blender,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2089.png
+,Poliigon website,,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%2013.jpg
+,parented object,P,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2090.png
+,mesh -> material,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2091.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2092.png"
+,mask -> clear mask,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2093.png
+,,inflating or deflating,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2094.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2095.png"
+,SHORTCUTS local view,,
+,ctrl I,inverse mask,
+,shift I,Local view,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2096.png
+,Brush Front faces onlyAttention à ne pas traverser lorsqu'on peint sur Blender.,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2097.png
+,,Grab = Move,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2098.png
+,,inflate brush,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2099.png
+,shrinkwarping modifiers,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20100.png
+,Assign shortcut blender,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20101.png
+,crease innerpli prononcé sur le côté intérieur d'un objet ou d'une surface.,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20102.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20103.png"
+,Blender works top to bottomsolidify on topsubdivision on bottom,because we want to extrude surface then smooth it out.,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20104.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20105.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20106.png"
+,hide selection mesh,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20107.png
+,Select more with up arrow,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20108.png
+,mask ctrl + I to invert,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20109.png
+,Bridge edge loop to make modifications.Apply modifications,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20110.png
+,Alt H = reveal hiddenCtrl H = hide selection,selection hidden cannot be affected by modifications,
+,snap to other object faces.,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20111.png
+,toggle Xray to select through an object,,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20112.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20113.png"
+,double clique pour arriver à sauvegarder.tab for ctrl f ?,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20114.png
+,object mode to edit mode,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20115.png
+,shade smooth,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20116.png
+,shade flat,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20117.png
+,create a material,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20118.png
+,lock camera to view,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20119.png
+,view through camera = F4Industry Compatible keymap,https://www.dropbox.com/scl/fi/dboz7fuh0f5255n5ocrdl/BlenderKeymap-IndustryCompatible_v2.pdf?rlkey=2yxe23jev9y2qmdg7txrzy8ip&e=1&dl=0,
+,in g mode middle mouse button,,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%20120.png
