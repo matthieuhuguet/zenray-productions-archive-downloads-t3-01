@@ -1,0 +1,10 @@
+# ReverseEngineering_FinalFantasyXVI
+
+Created: June 2, 2025 9:35 AM
+Status: If Dropped Persevere!
+
+reverse-engineer créatif, la voie la plus efficace pour atteindre un rendu « AAA-solo » est : 
+
+(1) **cartographier chaque système de FF XVI** en te basant sur captations vidéo, interviews développeurs et portfolios ArtStation ; 
+
+(2) **prototyper ces systèmes dans Unreal Engine 5** via des greyboxes jouables en deux semaines maxi ; (3) **itérer sous forme de sprints Tech-Art** (90 min × 2/jour) afin d’empiler shading stylisé, VFX Niagara, gameplay Blueprint et outils Python, tout en publiant des devlogs pour attirer des collaborateurs et des playtesteurs. Le détail ci-dessous t’explique **quoi décortiquer**, **comment l’implémenter**, et **dans quel ordre** pour livrer rapidement des démos de niveau FF XVI.
