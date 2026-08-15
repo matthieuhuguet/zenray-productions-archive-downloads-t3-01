@@ -1,0 +1,11 @@
+﻿Name
+Update all Controls with BonesControlTransform
+Shift W + H for align top nodes
+"Left Side _l is Blue (Democrats) and the Right Side _r is Red (Republican) Center is "
+Create Instant Controls FK
+Ultra Fast Rig FK
+Add ctrl for selected bone
+Select Multiple Bones and Control at once
+"Size for Circle_Thick scale int XYZ[] = {2, 2, 10};"
+FIX Mirror Options Errors
+Ctrl + Period pour modifier le shape transform directement
