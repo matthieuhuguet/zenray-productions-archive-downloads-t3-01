@@ -1,0 +1,17 @@
+# ux_ui
+
+- **philosophie :** immersive, contextuelle. esthétique art asiatique/élégance moderne.
+- **inspiration :** ui épurée ghost of tsushima, clarté black myth wukong.
+- **éléments clés :**
+    - **hud :** barre vie joueur (bas gauche), barre énergie/mana (sous vie), icônes compétences (au-dessus, actives), barre vie ennemi/boss (haut écran).
+    - **notifications :** dégâts (chiffres flottants), objets ramassés (texte discret), messages monde (texte contextuel).
+    - **écran pause/inventaire (simplifié) :** menu simple (inventaire basique, compétences, options).
+- **à faire :** assets graphiques (placeholders) hud, implémenter affichage, système notifications.
+- **prémisse :** monde corrompu ("brume ancienne"). moine-guerrier solitaire se réveille, sans mémoire, doit purifier la terre.
+- **inspiration :** voyage en occident (black myth wukong), mélancolie/beauté imperfection (kore heda, hayao miyazaki).
+- **monde : "le royaume d'écho"**
+    - jadis vibrant, peuplé créatures/divinités. maintenant défiguré/silencieux. brume transforme faune/flore.
+    - temples/monuments : vestiges ère glorieuse, indices passé.
+- **objectif joueur :** traverser royaume, comprendre origine brume, dissiper. zones purifiées révèlent mémoire héros.
+- **ton :** épique, mature, contemplatif. défis intenses, interludes sereins.
+- **à faire :** court texte intro (écran titre), 2-3 éléments lore simples (inscription, objet).
