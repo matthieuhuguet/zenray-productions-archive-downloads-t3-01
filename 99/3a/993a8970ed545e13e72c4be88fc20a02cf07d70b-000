@@ -1,0 +1,4 @@
+# Untitled
+
+: truncation
+ 1: La troncation avec les entiers consiste à supprimer la partie décimale d'un nombre à virgule flottante lors de sa conversion en nombre entier, sans arrondir. Elle se contente de conserver la partie entière du nombre, en arrondissant toujours vers zéro.
