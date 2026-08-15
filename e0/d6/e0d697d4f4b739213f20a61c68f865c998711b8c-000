@@ -1,0 +1,79 @@
+# Procedural Wall
+
+Technology: Houdini, Substance
+
+![image.png](Procedural%20Wall/image.png)
+
+[MC MinimoysWall, Marc Chevry](https://www.artstation.com/artwork/rRBKP5)
+
+# Architecture générateur de mur procédural
+
+## Contexte et hypothèses
+
+- Cible principale : outil interactif dans Unreal via Houdini Engine (HDA).
+- Texturing : hybride (Houdini produit masques/IDs, Substance finalise les textures).
+- Références utiles : le mur Minimoys est courbe‑driven, propose hauteur/variation/arches, et l’ivy est un module séparé (ex. IvyTaming). Le design d’origine étant protégé, on s’en inspire uniquement pour la méthodologie.
+
+## Architecture fonctionnelle
+
+- **Entrées**
+    - Courbe de tracé + éventuel terrain (pour projection/alignement).
+    - Paramètres de style : hauteur, épaisseur, module pierre, arches/bridges, dégradation, bruit, densité.
+- **Modules Houdini (SOP)**
+    - Blockout/guide → gabarit du mur (volume, arches, top).
+    - Instancing de briques/roches → kit de base, variations, alignement.
+    - Damage & breakup → voids, effondrements, déformations locales.
+    - Top & épaisseur → dégâts au sommet, irrégularités.
+    - Détails → petits éclats, debris, variations locales.
+    - UV + masques → UV sets + Vertex Color/ID maps.
+- **Sorties**
+    - Géométrie finale + LODs + collisions + masques.
+    - Ivy optionnel en sortie séparée (ou via HDA dédié).
+
+```mermaid
+graph LR
+InputCurve[InputCurve] --> HoudiniHDA[HoudiniHDA]
+Terrain[TerrainInput] --> HoudiniHDA
+HoudiniHDA --> MaskBake[MaskBake]
+MaskBake --> Substance[SubstanceTexturing]
+Substance --> Unreal[UnrealIntegration]
+HoudiniHDA --> Unreal
+```
+
+## Pipeline détaillé
+
+1. **Cadrage des paramètres et contraintes**
+    - Définir la liste minimale de paramètres (hauteur, épaisseur, style, arches/bridges, dégâts, ivy) et les plages physiques.
+    - Fixer l’échelle (cm pour UE), densité de briques, et budget de poly/LOD.
+2. **Houdini HDA modulairisé**
+    - Organiser le graphe en sous‑réseaux : `Blockout`, `Bricks`, `Damage`, `Top`, `MasksUV`, `Output`.
+    - Prévoir un mode `Preview`/`Final` (switch en fin de réseau) pour itérer vite.
+    - Exploiter SideFX Labs (Auto UV, Texel Density, Align/Distribute, etc.) et des nulls de sortie clairs.
+    - Sortir des groupes de collision au format UE (`collision_geo_ucx_*`).
+3. **Stratégie de masques et UVs (hybride)**
+    - Générer des masques procéduraux : salissure, mousse, humidité, fractures, exposition.
+    - Exporter ces masques via Vertex Colors ou textures dédiées (A/R/G/B) pour piloter les matériaux UE/Substance.
+    - Définir 1–2 UV sets : un pour tileables, un pour bakes locaux si nécessaire.
+4. **Texturing Substance + baking**
+    - Dans Substance, créer un graph maître avec entrées de masques pour variations locales.
+    - Standardiser un preset d’export PBR (BaseColor, Normal, ORM).
+    - Option batch via PDG si génération de variantes (taille/style/ruine).
+5. **Intégration Unreal (Houdini Engine)**
+    - Importer l’HDA, exposer les paramètres principaux dans le Details panel.
+    - Assigner un master material qui consomme masques/IDs.
+    - Générer LODs/Nanite selon budget, valider collisions, pivots et lightmap UV.
+6. **Gestion des assets Marketplace (Fab/Gumroad)**
+    - Créer un “adapter” d’ingestion : normaliser scale, pivot, UV, matériaux.
+    - Tenir un inventaire des assets réutilisables et de leurs licences.
+    - Préparer un kit de briques/roches standard pour le tool.
+7. **Validation et perf**
+    - Tester sur petits/grands murs, arches, murs courbes.
+    - Vérifier temps de cook, taille mémoire, collisions et qualité visuelle.
+
+## Structure projet recommandée (proposée)
+
+- `[ProjectRoot/houdini/](ProjectRoot/houdini/)` : HDA, hip, scripts
+- `[ProjectRoot/substance/](ProjectRoot/substance/)` : graphs, presets, exports
+- `[ProjectRoot/unreal/](ProjectRoot/unreal/)` : project UE, materials, blueprints
+- `[ProjectRoot/assets_library/](ProjectRoot/assets_library/)` : sources Marketplace
+- `[ProjectRoot/docs/](ProjectRoot/docs/)` : conventions, paramètres, notes
