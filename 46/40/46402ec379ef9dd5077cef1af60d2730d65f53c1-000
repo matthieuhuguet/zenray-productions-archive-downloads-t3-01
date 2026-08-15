@@ -1,0 +1,64 @@
+# Translation Brief — Black Panther: Wakanda Forever
+
+Task: translate English OCR SRT chunks into polished French SRT.
+
+Hard format rules:
+- Keep every subtitle number unchanged.
+- Keep every timecode line unchanged.
+- Keep the same entry boundaries and blank line between entries.
+- Translate only subtitle body lines.
+- Output UTF-8 `.srt`.
+- Do not add comments, explanations, markdown fences, or metadata inside the SRT.
+
+French quality target:
+- Natural, cinematic French, impeccable grammar.
+- Clear and concise enough for subtitles.
+- Prefer idiomatic French over literal English.
+- Preserve emotional tone: grief, solemnity, diplomacy, ritual, urgency, humor.
+- Keep line length reasonable; 1 or 2 lines per cue when possible.
+- Use straight ASCII apostrophes (`'`) for SRT compatibility.
+- Use normal spaces before `!` and `?`.
+
+Media context:
+- Film: *Black Panther: Wakanda Forever* (2022), Marvel.
+- Main languages/cultures: Wakanda, Talokan, Haiti, US institutions.
+- The source is OCR from English PGS SDH. Correct obvious OCR glitches silently.
+- SDH labels like `SHURI:` can be translated/preserved as `SHURI :`.
+- Sound/action cues in parentheses should be translated naturally:
+  `(WHISPERING)` -> `(CHUCHOTANT)`;
+  `(GRUNTS)` -> `(GROGNE)`;
+  `(SPEAKING X)` -> `(PARLE X)` or omit if awkward only when context clearly makes it redundant.
+
+Glossary and consistency:
+- Wakanda -> Wakanda
+- Wakandan -> wakandais / wakandaise
+- Talokan -> Talokan
+- Talokanil -> talokanil / Talokanil depending sentence; use lowercase adjective when grammatical.
+- Namor -> Namor
+- Shuri -> Shuri
+- T'Challa -> T'Challa
+- Ramonda -> Ramonda
+- Riri Williams -> Riri Williams
+- Okoye -> Okoye
+- M'Baku -> M'Baku
+- Nakia -> Nakia
+- Killmonger -> Killmonger
+- Griot -> Griot
+- Dora Milaje -> Dora Milaje
+- Black Panther -> Black Panther if title/identity; `Panthère noire` only if generic animal meaning.
+- Heart-Shaped Herb -> Herbe-Cœur
+- vibranium -> vibranium
+- Midnight Angel -> Ange de minuit
+- Queen Mother -> Reine mère when title-like; otherwise `la reine mère`.
+- Princess -> Princesse / princesse depending direct address.
+- King -> Roi / roi depending direct address.
+- My Queen -> Ma reine
+- My King -> Mon roi
+- Ancestors -> Ancêtres
+- Bast -> Bast
+
+Style examples:
+- "We are running out of time." -> "Nous n'avons plus beaucoup de temps."
+- "Please allow me to heal my brother." -> "Je t'en prie, laisse-moi guérir mon frère."
+- "As you wish, Princess." -> "Comme vous voudrez, Princesse."
+- "I am aware of the urgency." -> "Je suis conscient de l'urgence."
