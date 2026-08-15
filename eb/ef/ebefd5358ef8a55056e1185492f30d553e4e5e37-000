@@ -1,0 +1,141 @@
+# Props & VFX
+
+Faire attention aux collisions de camera.
+
+Séquence Gameplay 
+
+```jsx
+1. A. Scrub (Eponge) Bubble VFX + SFX / B. Rince VFX WaterJet + SFX
+2. Cut VFX Dog Hair (Similar to grass) + SFX Scissors
+3. Dry VFX Hot Air Steam ground + VFX Hot Air Jet Tornado.
+```
+
+# Props
+
+## Cut
+
+![image.png](Props%20&%20VFX/image.png)
+
+![image.png](Props%20&%20VFX/image%201.png)
+
+## Bath
+
+ : Baignoire qui récolte l’eau du rinçage
+
+![image.png](Props%20&%20VFX/image%202.png)
+
+![image.png](Props%20&%20VFX/image%203.png)
+
+Prop Bath : 
+
+## Dry
+
+: Sauna / Hot Air (côté capsule intérieur pas air extérieur.)
+
+![image.png](Props%20&%20VFX/image%204.png)
+
+![image.png](Props%20&%20VFX/image%205.png)
+
+![image.png](Props%20&%20VFX/image%206.png)
+
+# Hand Props
+
+![image.png](Props%20&%20VFX/image%207.png)
+
+![image.png](Props%20&%20VFX/image%208.png)
+
+![image.png](Props%20&%20VFX/image%209.png)
+
+![image.png](Props%20&%20VFX/image%2010.png)
+
+![image.png](Props%20&%20VFX/image%2011.png)
+
+![image.png](Props%20&%20VFX/image%2012.png)
+
+![image.png](Props%20&%20VFX/image%2013.png)
+
+4 Zones
+
+Dry
+
+Cut
+
+Tools Table
+
+Square Ratio
+
+![image.png](Props%20&%20VFX/image%2014.png)
+
+![image.png](Props%20&%20VFX/image%2015.png)
+
+![image.png](Props%20&%20VFX/image%2016.png)
+
+![image.png](Props%20&%20VFX/image%2017.png)
+
+![image.png](Props%20&%20VFX/image%2018.png)
+
+![image.png](Props%20&%20VFX/image%2019.png)
+
+![image.png](Props%20&%20VFX/image%2020.png)
+
+![image.png](Props%20&%20VFX/37df358c-2de0-4aa3-a8a7-a40fa7ffde79.png)
+
+Final Mix
+
+![image.png](Props%20&%20VFX/image%2014.png)
+
+![image.png](Props%20&%20VFX/image%2021.png)
+
+![image.png](Props%20&%20VFX/image%2022.png)
+
+![image.png](Props%20&%20VFX/image%2023.png)
+
+# Blockout
+
+![image.png](Props%20&%20VFX/image%2024.png)
+
+Bath Station
+
+![image.png](Props%20&%20VFX/image%2025.png)
+
+Cut Station
+
+![UnrealEditor_7gMPqsBbFz.jpg](Props%20&%20VFX/UnrealEditor_7gMPqsBbFz.jpg)
+
+Dry Station (Batiment double intérieur sorte de capsule de chaleur) possibilité de creux en dessous pour ajouter de la chaleur four …
+
+*Inspiration*
+
+![image.png](Props%20&%20VFX/image%2026.png)
+
+![image.png](Props%20&%20VFX/image%2027.png)
+
+![UnrealEditor_jJkWYK1GHg.png](Props%20&%20VFX/UnrealEditor_jJkWYK1GHg.png)
+
+1 Warehouse and a backyard (interior or exterior, kind of 
+
+# VFX
+
+![image.png](Props%20&%20VFX/image%2028.png)
+
+# SFX
+
+![image.png](Props%20&%20VFX/image%2029.png)
+
+[SFX_RinceWash_002.wav](Props%20&%20VFX/SFX_RinceWash_002.wav)
+
+[SFX_Scissors_001.wav](Props%20&%20VFX/SFX_Scissors_001.wav)
+
+[SFX_ScrubBuble_001.wav](Props%20&%20VFX/SFX_ScrubBuble_001.wav)
+
+[SFX_ScrubFoam_001.wav](Props%20&%20VFX/SFX_ScrubFoam_001.wav)
+
+[SFX_Dryer_001.wav](Props%20&%20VFX/SFX_Dryer_001.wav)
+
+[SFX_Dryer_V002.wav](Props%20&%20VFX/SFX_Dryer_V002.wav)
+
+[SFX_DryerGranularity_V003.wav](Props%20&%20VFX/SFX_DryerGranularity_V003.wav)
+
+[SFX_PetClippers_V002.wav](Props%20&%20VFX/SFX_PetClippers_V002.wav)
+
+[SFX_RinceWash_001.wav](Props%20&%20VFX/SFX_RinceWash_001.wav)
