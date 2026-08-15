@@ -1,0 +1,14 @@
+﻿Name
+Multi Switch + Custom Input
+Exposing Parameters SBSAR
+Pour ajouter un nouvel output renseigner les paramètres
+Right click into the material rendered to get new map to add.
+0.2 Blur HQ Grayscale is often great
+Le bug du reroute l’ouput node connection c’est parce que je suis pas en standard 1 mais en material 2
+Tesselate the mesh to get displacement.
+"Propriétés semi-métalliques : Les matériaux mi-métalliques, par exemple des tissus contenant des fils métalliques ou des traitements réfléchissants, combinent des propriétés métalliques (spéculaires) et non métalliques (diffusives)."
+Roughness Map = White is rough / Black is smoother
+"For Metallic Map there is no transition it’s either black or white Metallic or Non Metallic "
+"Pour la Roughness on part de la curvature, qu’on peut inverse"
+Histogram Range : Ce genre de curve indique un mauvaise contraste utiliser un level pour modifier
+Visible if conditions
