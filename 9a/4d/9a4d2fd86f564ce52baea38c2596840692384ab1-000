@@ -1,0 +1,24 @@
+# Python Solutions Audio
+
+Created: January 23, 2025 4:28 PM
+Update: January 23, 2025 4:50 PM
+
+flux, streaming, on utilise un flux, pour l’audio pour initialiser 
+
+En Python, un flux (ou *stream*) est souvent représenté par un objet capable de lire, écrire, ou transformer des données de manière séquentielle, sans charger tout en mémoire.
+**Se rappeler qu'en gestion audio, notamment en Python, il est essentiel d'utiliser un flux audio pour éviter les problèmes de latence et de performance.**
+
+```bash
+def __init__(self, samplerate=48000, channels=2):
+    """
+    Ouvre une fois le périphérique audio en mode streaming.
+    On garde ce flux actif pour éviter la latence de réouverture.
+    """
+    self.samplerate = samplerate
+    self.channels = channels
+    self.buffer = np.zeros((0, channels), dtype='float32')
+    self.position = 0
+# Définit le taux d’échantillonnage (samplerate) et le nombre de canaux audio (channels).
+# Initialise un buffer (tableau numpy) pour contenir les données audio à lire.
+# self.position : garde la trace de la position actuelle dans le buffer.
+```
