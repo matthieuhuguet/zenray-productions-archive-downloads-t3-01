@@ -1,0 +1,19 @@
+#!/bin/bash
+# ZenRay - telechargement video via ffmpeg (macOS)
+set -e
+OUT="$HOME/Downloads/Initial-D-S01E01.mkv"
+echo "ZenRay - telechargement de la video dans Telechargements"
+if ! command -v ffmpeg >/dev/null 2>&1; then
+  echo ""
+  echo "ffmpeg est requis."
+  echo "Installe-le avec :"
+  echo "  brew install ffmpeg"
+  echo ""
+  read -n 1 -s -r -p "Appuie sur une touche pour fermer."
+  exit 1
+fi
+ffmpeg -hide_banner -stats -i "http://localhost:3100/api/hls-cli?token=cGFnZXMvVmlkZW9zL0luaXRpYWwgRCBTMDFFMDEvSW5pdGlhbCBEIFMwMUUwMS5tcDQubWVkaWEuanNvbgoxNzgwMjY2NTIyMjg2.oW27oWV9ujQJGPA2fp-xzC3Z2cZKktx48E-cVaHmuoA" -map 0 -c copy "$OUT"
+echo ""
+echo "Termine. Fichier cree :"
+echo "  $OUT"
+read -n 1 -s -r -p "Appuie sur une touche pour fermer."
