@@ -1,0 +1,65 @@
+# UIDisplay
+
+Created: March 15, 2026 5:04 PM
+Status: Cancelled
+
+![acd89718-df8d-404b-9d32-627c2aab70e9.jpg](UIDisplay/acd89718-df8d-404b-9d32-627c2aab70e9.jpg)
+
+## **Implémenté : ~285 / 569 features (~50%)**
+
+| **Module (doc)** | **Total doc** | **Implémenté** | **%** |
+| --- | --- | --- | --- |
+| Canvas & Viewport | 45 | ~25 | 55% |
+| Basic Elements | 52 | ~20 | 38% |
+| Game Elements (HUD) | 68 | ~42 | 62% |
+| Animation | 52 | ~28 | 54% |
+| Export | 35 | ~20 | 57% |
+| Presets | 42 | ~32 | 76% |
+| Styling / Effects | 50 | ~35 | 70% |
+| Properties Panel | 40 | ~30 | 75% |
+| Layer Panel | 25 | ~16 | 64% |
+| Canvas Interactions | 30 | ~25 | 83% |
+| App / UI Shell | 30 | ~22 | 73% |
+
+---
+
+### **✅ Bien couvert**
+
+- Canvas (pan/zoom/rulers/grid/snap/smart guides/artboard)
+- Game elements HUD (15 types avec renderers SVG)
+- Export (10 formats : React, Tailwind, Styled, Framer, Lottie, SVG, HTML, CSS Modules, tokens…)
+- Presets (~900+, 10 thèmes, filtres)
+- Effects stack (27 types)
+- Animation presets (100+, 17 easing types)
+- Keyboard shortcuts, command palette, handoff mode, 6 app themes
+
+---
+
+### **❌ Manquant (gros morceaux)**
+
+**Bloqué par architecture Rust/wgpu (core value prop):**
+
+- GPU masking (7 types : alpha, luminosity, vector, shape, gradient, text, inverted)
+- 48 effets visuels complets (on en a 27 CSS approximés)
+- Native 60fps performance garanti
+- Shaders WGSL custom
+
+**Fonctionnalités web non implémentées:**
+
+- Export image PNG/JPEG/WebP (capture DOM → canvas)
+- Multiple artboards
+- Composant system (variants + overrides)
+- Édition vectorielle / Bézier paths
+- Boolean operations (union, soustraction, intersection)
+- Bibliothèque d'icônes (5000+ SVG doc)
+- 64 styles AAA de référence (on en a 10 thèmes génériques)
+- Sauvegarde/chargement de projets (au-delà du localStorage)
+- Sprite sheets & texture atlases
+- Unity UMG / Unreal UI Toolkit export
+- Recherche FTS avancée sur les presets
+
+---
+
+### **Résumé**
+
+Le **layer React/UI est ~75% complet**. Le **backend Rust/wgpu est à 0%** — c'est la partie "Tauri native" qui constitue l'USP principale selon la doc (GPU masking, performance garantie). Sans ça, l'app est un excellent éditeur UI web, mais pas encore le "seul outil combinant GPU masking + React export + 64 styles AAA" promis.
