@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# ZenRay - telechargement video via ffmpeg (Linux / macOS)
+set -euo pipefail
+OUT="$HOME/Downloads/Initial-D-S01E01.mkv"
+if ! command -v ffmpeg >/dev/null 2>&1; then
+  echo "ffmpeg est requis. Installe-le (ex: apt install ffmpeg / brew install ffmpeg)." >&2
+  exit 1
+fi
+mkdir -p "$HOME/Downloads"
+ffmpeg -hide_banner -stats -i "http://localhost:3100/api/hls-cli?token=cGFnZXMvVmlkZW9zL0luaXRpYWwgRCBTMDFFMDEvSW5pdGlhbCBEIFMwMUUwMS5tcDQubWVkaWEuanNvbgoxNzgwMjY2NTIyMjg2.oW27oWV9ujQJGPA2fp-xzC3Z2cZKktx48E-cVaHmuoA" -map 0 -c copy "$OUT"
+echo "Termine. Fichier cree : $OUT"
