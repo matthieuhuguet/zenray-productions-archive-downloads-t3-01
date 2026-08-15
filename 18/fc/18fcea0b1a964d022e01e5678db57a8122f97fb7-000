@@ -1,0 +1,7 @@
+# Untitled
+
+Data Types: char
+: . char
+• The char data type is used for variables that will store single characters.
+• Characters always take up 1 byte of memory (8 bits). This means the range of values they can store is necessarily limited to 8 bits worth of information.
+• Thanks to ASCII, we've developed a mapping of characters like A, B, C, etc ... to numeric values in the positive side of this range.ex : 65 = A.
