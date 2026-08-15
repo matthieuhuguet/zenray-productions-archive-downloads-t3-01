@@ -1,0 +1,51 @@
+# Rigging - Gnomon Workshop
+
+[Untitled](Rigging%20-%20Gnomon%20Workshop/Untitled%201cbd4ee179c38186a83fddf4889452b8.csv)
+
+Technical Animator
+
+![{620B3BEA-296E-4D25-BC17-FE7D8F0B3114}.png](Rigging%20-%20Gnomon%20Workshop/620B3BEA-296E-4D25-BC17-FE7D8F0B3114.png)
+
+Bridge : Art & Design
+
+Looking on cutting edge →
+
+Deformation Systems
+
+Locomotion Systems - Motion Matching
+
+Rendering Systems
+
+Naming Conventions
+
+![image.png](Rigging%20-%20Gnomon%20Workshop/image.png)
+
+Referencing Files : Important for the pipeline.
+
+Utiliser référence pour créer Animation
+
+![image.png](Rigging%20-%20Gnomon%20Workshop/image%201.png)
+
+Faire en sorte que le rig
+
+MetaHuman to mesh intéressant.
+
+[MetaHuman from Mesh Quick Start in Unreal Engine | MetaHuman Documentation | Epic Developer Community](https://dev.epicgames.com/documentation/en-us/metahuman/metahuman-from-mesh-quick-start-in-unreal-engine)
+
+[https://www.youtube.com/watch?v=xOVyme4TFZw](https://www.youtube.com/watch?v=xOVyme4TFZw)
+
+![image.png](Rigging%20-%20Gnomon%20Workshop/image%202.png)
+
+Lock Camera and Set to Unlit 
+
+![image.png](Rigging%20-%20Gnomon%20Workshop/image%203.png)
+
+04.*building_the_skeleton_in_maya*_part_1
+
+Cette Solution Fonctionne En revanche il faudrait groom les hairs etc. Occupons nous de faire en sorte de créer le rig.
+
+![image.png](Rigging%20-%20Gnomon%20Workshop/image%204.png)
+
+![image.png](Rigging%20-%20Gnomon%20Workshop/image%205.png)
+
+Mesh Autorig to Unreal : Très cool.
