@@ -1,0 +1,37 @@
+﻿Name,Tags
+Node editor,
+Material / Shader Can Blend presets of surface,
+Notes in the standard surface …,
+Add Attributes into extra attributes for models.,
+"Hit SELECT
+bottom left
+to have the EyeGlow_Shader",
+Control : Connect extra attributes to new parameter,
+"Can Key for animation ",
+Used or not used Editor,
+Alt Shift D : Destroy the history of the mesh,
+"Green Mesh
+Signifie que le mesh a perdu son shader d’origine",
+Middle mouse button drag from outliner to Node Editor,
+Using Bookmark in node editor,
+Out color parameter in module .,
+Connect scenes in the node editor to modify parameters together.,
+"Plugins for rendering are
+Arnold
+Vray
+Redshift",
+Check connections across the node editor and connection editor,
+Windows UI Elements → Helpline,
+Highlight in the script editor to execute the highlighted command,
+Bind options for double click in shelves editor,
+pop up menus shelves,
+"Create a marking menus
+Assign to Hotkey Editor",
+Access to the marking menu by pressing the hotkey key and left click,
+Load Shelf and display them in Marking Menu,
+"View Bookmark
+add bookmark to shelf for big scenes.",
+blue pencil tool,
+Script Editor et Shelves,
+Match Transformations better than constrain save shortcut into shelve.,
+"Save all shelves ",
