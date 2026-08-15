@@ -1,0 +1,3 @@
+# Flood Fill
+
+: Analyzes an image and separates it into distinct regions based on color or luminance. Each separated area can then be individually manipulated or used as masks for further texturing processes.
