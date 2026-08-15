@@ -1,0 +1,15 @@
+# FIX Mirror Options Errors
+
+![image.png](FIX%20Mirror%20Options%20Errors/image.png)
+
+Parcourir tous les contrôles d'un rig, de vérifier leur correspondance avec des os (bones) dans le squelette, et de définir leur transformation initiale (initial transform) en fonction de celle des os correspondants.
+
+![image.png](FIX%20Mirror%20Options%20Errors/image%201.png)
+
+![image.png](FIX%20Mirror%20Options%20Errors/image%202.png)
+
+Fixed Issue
+
+Don’t forget to set inital Control
+
+And item need to be connected.
