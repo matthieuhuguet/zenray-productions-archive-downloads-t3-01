@@ -1,0 +1,435 @@
+# .old
+
+### 2.1 game structure flow
+
+hub du salon : nettoyer le salon/station → arrivée animal (diagnostic léger, name tag) → station 1 **bain** → station 2 **séchage** → station 3 **coupe** → écran de récapitulatif (note a–d, pourboire, photo avant / après) → retour hub.
+
+### 2.2 gameplay references
+
+- animal shelter 2: stations de soin lisibles, attentes du public.
+- Monster Care Simulator: collections et gestions d’argent
+- little friends: dogs and cats: « care » simple et tactile.
+- hades 2: « punch » sonore contrôlé, micro‑variations. pathing
+- animal crossing: new horizons: chaleur diégétique et détails tactiles.
+- gran turismo, yakuza: like a dragon (ichiban holdings), not a hotel: progression esthétique et montée en gamme de l’espace.
+
+### 2.3 camera, character and controls
+
+- **caméra**: première personne, champ de vision FOV 90, léger mouvement de balancier camera smooth (éviter l’effet fps nerveux), vignettage discret lors des gestes soutenus, lors des mini jeux.
+- **personnage**: mains et outils visibles, pas de corps complet, inertie légère.
+- **contrôles**: souris pour viser; clic gauche droite pour agir; menu radial pour choisir l’outil ou touche dédiée; bouton contextuel pour rincer ou valider, intéragir; vibration très légère sur manette.
+
+### 2.4 flowchart and game flow
+
+« hub → intake → bain → séchage → coupe → récapitulatif → hub ». aides contextuelles activables et désactivables. aucune branche punitive.
+
+### 2.5 gameplay loops
+
+- **boucle courte (10–20 secondes)**: chaque geste produit trois micro‑récompenses toutes les dix secondes (effet visuel, son court, hausse de l’humeur).
+- **boucle manche (environ cinq minutes)**: enchaîner les trois stations, obtenir une note, percevoir un pourboire, prendre une photo.
+- **boucle session**: améliorer la note moyenne, faire progresser la réputation, débloquer la qualité esthétique du salon (hors prototype si nécessaire).
+
+### 2.6 mechanics and systems (overview)
+
+- **mécaniques principales**: bain — séchage — coupe.
+- **mécaniques secondaires**: humeur, confort, fluidité, score, photo, améliorations d’outils légères.
+
+## 3. mécaniques et prototype
+
+cette section est découpée en **mécaniques principales** (les 3 stations cœur) et **mécaniques secondaires / systèmes** (humeur, flow, score, progression), avec **livrables concrets** pour unreal engine 5. objectif: rendre chaque station **copiable/collable** dans le projet maître.
+
+## 3.1 Bath
+
+But : effacer un masque de saleté, recouvrir d’un masque de mousse, puis rincer proprement.
+
+Entrées : arroser (maintenir), frotter (glisser), rincer (bouton).
+
+Système : masques dirt/foam en Render Targets sur UV du chien ; l’eau et la mousse modifient les masques en temps réel. Jauge de confort (température et pression) : rester dans la zone idéale maintient l’humeur. Score : C 70 %, B 90 %, A 98 % de zones propres.
+
+**but**: effacer la saleté, appliquer la mousse, rincer proprement.
+
+**entrées**: arroser (maintenir), frotter (glisser), rincer (bouton).
+
+**mécanique**:
+
+- 2 **render targets 1024**: `RT_Dirt`, `RT_Foam` peints sur les **UV** du mesh chien.
+- un **trace** échantillonne la trajectoire de l’outil tous les *X* cm, **peint** additif/soustractif, **émet** VFX/SFX parcimonieux.
+- **jauge de confort** (température, pression). hors plage idéale: baisse d’**humeur**.
+- **score**: C ≥ 70 %, B ≥ 90 %, A ≥ 98 % de surface propre; malus si zones sensibles (yeux/oreilles) frottées trop fort.
+
+Bath 
+
+- **blueprints**: `BP_Station_Bain` ; outils `BP_Tool_Shower`, `BP_Tool_Sponge`.
+- **materials**: `M_Dog_Body` avec params Saleté/Mousse via `MPC_Station` (Material Parameter Collection).
+- **render targets**: `RT_Dirt`, `RT_Foam` (1024).
+- **niagara**: `NS_WaterJet`, `NS_FoamBurst`, `NS_Drip`.
+- **metasounds**: `MS_WaterLoop`, `MS_ScrubShort`, `MS_RinsePop` (micro‑variations de pitch).
+- **ui diégétique**: `Widget_Watch` (humeur, confort, flow) + heatmap toggle.
+
+**définition de fini**: station jouable, heatmap visible, note A–D cohérente, VFX/SFX à chaque action clé, paramètres exposés dans `DA_StationTuning`.
+
+## 3.2 Dry
+
+But : réduire un wetness map sans surchauffer.
+
+Entrées : déplacer un cône d’air ; régler la température via un slider.
+
+Système : l’humidité perle et décroît sous le cône ; température trop élevée entraîne frizz et malus d’humeur. Score : seuils de sécheresse par zones et bonus si maintien bref dans la zone idéale.
+
+## 3.3 Cut
+
+But : atteindre une longueur cible tolérante par zones.
+
+Entrées : déplacer la tondeuse, maintenir pour couper, choisir entre trois gardes de longueur.
+
+Système : guides colorés par tolérance, assistance de verrouillage légère pour stabiliser le geste. Score : A si 95 % des surfaces sont dans la tolérance, B à 85 %, C en‑dessous.
+
+### Coupe des Poils
+
+**but**: atteindre une **longueur cible** tolérante par zones.
+
+**entrées**: déplacer la **tondeuse**, maintenir pour couper, 3 **gardes** de longueur.
+
+**mécanique**:
+
+- **render target** `RT_Length` 1024 (valeur de longueur par pixel).
+- **guides colorés** montrent la cible. **snap assist** léger pour stabiliser le geste.
+- **score**: A si ≥ 95 % dans la tolérance ; B ≥ 85 % ; malus si zones interdites (truffe/coussinets).
+
+**livrables ue5 — coupe**:
+
+- **blueprints**: `BP_Station_Coupe` ; outil `BP_Tool_Clipper` (vitesse, garde).
+- **materials**: `M_Dog_Fur_Length` (lecture `RT_Length`).
+- **render target**: `RT_Length`.
+- **niagara**: `NS_FurClippings` (débris discrets).
+- **metasounds**: `MS_ClipperLoop`, `MS_CutConfirm`.
+- **ui aide**: overlay **Guides** minimal, désactivable.
+
+**définition de fini**: tolérance claire, aides visuelles, note A–D crédible.
+
+# 3.4 Stations Properties Holdings Real Estate. (hors scope)
+
+Possibilité d’avoir des propriétés qui s’achète ou sens de progression. Sentiment de progression commencer par quelque chose de petit puis itérer. C’est une boucle de gameplay quasi infini qui peut lier élégament le fait d’avoir de nouveaux animaux tout en débloquant de nouveaux environnement. 
+
+**principe**: commencer dans un **salon modeste**, débloquer des paliers **esthétiques & ergonomiques** (inspi Gran Turismo, Yakuza: Ichiban Holdings, NOT A HOTEL). non requis pour la démo, mais **interfaces prêtes**.
+
+**livrables**:
+
+- `DA_SalonTier` (Tier1, Tier2, Tier3 Premium) avec matériaux/meshes décor et **buffs légers** (ex: meilleure ventilation → évaporation +5 %).
+- fonction `ApplySalonTier()` appliquant palette matériaux, set décor et buffs sur la carte.
+
+![image.png](old/image.png)
+
+![image.png](old/image%201.png)
+
+![Arc_9zdAOH8MH2.jpg](old/Arc_9zdAOH8MH2.jpg)
+
+![Arc_Va0ia2Hcuh.jpg](old/Arc_Va0ia2Hcuh.jpg)
+
+Références gameplay gran turismo, yakuza like a dragon 7 ichiban holdings, not a hotel japan arch premium end game.
+
+## 3.5 Nourriture
+
+système de poffin dans pokémon dans animal crossing ou bien 
+
+Mécanique Principale du jeu et mécaniques secondaires ou systèmes.
+
+# 3.6 Stats pour les chiens et bonus STats and balancing
+
+Balcing à réfléchir à quoi des stats peuvent servir pour des chiens et si les bonus sont permanents comment conserver une forme de progression.
+
+`DogData`: Race, Sensibilité (oreilles/yeux), Tolérance chaleur, Stress, **Saleté initiale**.
+
+- **démo**: une seule race; variations **légères** via DataAsset pour ne pas casser la lisibilité.
+- **bench**: A ≈ 95 %, B ≈ 85 %, **60–90 s** par station.
+
+### 2.7 simulated screenshot of interface (specification)
+
+- **~~diégétique**: montre au poignet affichant l’humeur, la fluidité, un minuteur souple.~~
+- **in‑world**: halos doux et **heatmaps** de saleté, d’humidité et de longueur, guides fantômes pour la coupe.
+- **écran de fin**: carte de score simple, pourboire, photo avant / après, conseil positif.
+
+### 2.8 wireframe, medium fidelity
+
+- **hub**: zone d’attente, trois baies alignées « bain / séchage / coupe », panneau réputation.
+- **station**: outil actif, bascule des heatmaps, montre visible.
+- **fin de manche**: résultat, photo, bouton rejouer.
+
+---
+
+## 3. story, setting and character
+
+---
+
+## 5. sound, sound effects and background music
+
+---
+
+**Pet Groomer Simulator - GDD Prototype**
+
+Version 1.0.2 · 14 octobre 2025
+
+TABLE OF CONTENTS
+
+1. Game Overview
+    1. Background of the exercise
+    2. Game Concept
+    3. Structure
+    4. Genre
+    5. Target Audience
+    6. Hardware Platforms
+    7. USP
+    8. Intention / Philosophy
+2. Gameplay & Mechanics
+    1. Game Structure Flow
+    2. Gameplay References
+    3. 3C
+    4. Flowchart and Game flow
+    5. Gameplay loops
+    6. Mechanics & systems
+    7. Fake screenshot Interface
+    8. Wireframe medium fidelity
+3. Story, Setting, and Character
+    1. Pitch
+4. Game Art Direction
+    1. Intention
+5. Sound, SFX & BGM
+    1. Track list & BGM
+
+**Pitch du concept**
+
+Pet Groomer Simulator est un jeu de simulation à la première personne où l’on crée et gère un salon de toilettage canin, en solo ou jusqu’à quatre joueurs. Le jeu vise une expérience satisfaisante et cozy : aucune pression temporelle stricte, mais des gestes “juicy”, lisibles et agréables. 
+
+Deux core pillars structurent l’ensemble : 1) le toilettage (prise en charge, soins, rendu et facturation) et 2) la vente de matériel à destination des animaux.
+
+**Sommaire**
+
+# 1. Vision et Positionnement
+
+Transformer un chien très sale en compagnon impeccable dans un atelier calme et chaleureux. Positionnement : simulation réaliste stylisée, gestes concrets, feedbacks riches, sans sanction dure et progression. Références de sensation : lisibilité des stations type Animal Shelter 2, chaleur tactile d’Animal Crossing: New Horizons, punch contrôlé des couches SFX à la Hades. niveau rythme et pacing de progression. (Jeux indé qui ont un très bon feel de progression + loop).
+
+# 2. Boucle Démo (≈ 5 minutes Vertical Slice)
+
+Accueil animal → enchaînement des trois stations (Bain → Séchage → Coupe) → récap note A–D et pourboire. Aucune défaite ; uniquement des notes et des bonus de fluidité. Lisibilité assurée par des heatmaps par station : saleté, humidité et longueur.
+
+# 4. SFX, VFX et Juicyness
+
+Philosophie sonore : layering doux et varié, micro‑variations de pitch, side‑chain léger de la musique sur une réussite (sweeteners), à la manière de l’approche décrite autour de Hades 2 ; soin apporté aux micro‑détails tactiles et diégétiques à la Animal Crossing: New Horizons.
+
+Technique UE5 : MetaSounds pour le routing dynamique (eau, mousse, souffle, tondeuse, tick de combo). Niagara pour bulles, gouttes, vapeur et gonflement du poil. Échantillonnage de trajectoire pour peindre les Render Targets, déclencher FX parcimonieux et jouer des one‑shots SFX variés.
+
+# 5. Direction Artistique
+
+Réaliste stylisé niveaux matériaux smooth, lisible à deux mètres. Salon niveau 1 : carrelage simple, lumière froide, outils basiques. Progression façon Gran Turismo vers un salon premium inspiré de NOT A HOTEL : bois clair, pierre, lumière naturelle et lignes japonaises contemporaines.
+
+réaliste stylisé, matériaux **lisses et propres**, lisible à **2 m**.
+
+- **tier 1** utilitaire: carrelage simple, lumière froide, outils basiques.
+- **tier 3** premium: bois clair, pierre, lumière naturelle, **codes d’architecture japonaise contemporaine**. inspiré de nintendos, ou style plus standard, us, canada. sorte de ferme. (notamment au début car plus impersonnel plus général standard).
+
+# 6. Progression : Salons et Animaux
+
+Salons : début volontairement modeste puis déblocages esthétiques et ergonomiques. Animaux : arrivée dans des états variables (très sales, stressés, blessures légères). Le loop de soin améliore humeur et qualité du rendu sans ajouter une couche d’adoption pour la démo.
+
+# 7. Implémentation UE5
+
+Carte : Map_Proto_Salon avec trois baies alignées (Bain, Séchage, Coupe).
+
+Blueprints : BP_StationBase expose StartStation(DogData) et OnStationComplete(Result). Enfants : BP_Station_Bain, BP_Station_Sechage, BP_Station_Coupe. DataAsset : DA_StationTuning pour seuils, tolérances, vitesses, gains d’humeur.
+
+Masques : trois Render Targets 1024 (saleté, mousse, humidité). VFX : Niagara sur sockets d’outil, paramètres via Material Parameter Collections. SFX : MetaSounds par station, bus commun, side‑chain musique. UI diégétique : montre de poignet affichant humeur, flow et soft‑timer. Perf cible : 60 fps PC milieu.
+
+# 8. Définition de Fini (DoD) Démo
+
+Enchaînement jouable des trois stations avec notes A–D cohérentes. Heatmaps visibles et désactivables. VFX et SFX présents sur chaque action clé, sans superposition agressive. Écran récapitulatif avec note, pourboire et photo avant/après. Build stable de cinq minutes avec onboarding immédiat.
+
+# 9. Références
+
+- Animal Shelter 2 — gameplay et stations de soin (YouTube): https://www.youtube.com/watch?v=njdoIu8nq6s
+- Animal Shelter 2 — bain du chien (YouTube): https://www.youtube.com/watch?v=3FThh3_rzco
+- Little Friends: Dogs & Cats — page Nintendo: https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Little-Friends-Dogs-Cats-1563007.html
+- Little Friends: Dogs & Cats — trailer (YouTube): https://www.youtube.com/watch?v=6zjvZT-UT3g
+- Hades II — entretien audio Darren Korb (UC Press Journals): https://online.ucpress.edu/jsmg/article/6/1/8/205397/Interview-with-Darren-Korb
+- Animal Crossing: New Horizons — analyse sound design (Audiokinetic Blog): https://www.audiokinetic.com/en/blog/animal-crossing-is-playable-by-the-totally-blind/
+- The Sound of Animal Crossing: New Horizons (GameMusic): https://gamemusic.net/the-sound-of-animal-crossing-new-horizons/
+- NOT A HOTEL — site officiel: https://notahotel.com/en
+
+# Annexe A — Checklist d’Exécution Aujourd’hui
+
+1) Bain : RT saleté + mousse, arrosoir et éponge, score A/B/C opérationnel.
+
+2) Séchage : cône d’air dynamique, gestion de la température, soft‑timer de flow.
+
+3) Coupe : guides de longueur, trois gardes, assistance légère au geste.
+
+4) MetaSounds : eau, mousse, souffle, tondeuse, tick de combo.
+
+5) Écran récapitulatif et photo avant/après.
+
+# Annexe B — Signature d’Intégration StationBase
+
+StartStation(DogData) → initialise les masques et paramètres de la station.
+
+OnStationComplete(Result) → renvoie score détaillé, humeur, temps et flags d’erreurs.
+
+# pet groomer simulator — mini-gdd prototype
+
+## 1) vision courte
+
+Fantaisie: transformer un chien très sale en compagnon impeccable, dans un salon calme, chaleureux, sans pression. esprit zen, cosy games
+
+Positionnement: simulation cozy à la première personne, gestes concrets, “juicy” propre et classe.
+
+Référence feel: lisibilité care d’Animal Shelter 2 + texture sonore tactile d’Animal Crossing NH + punch maîtrisé à la Hades 2 VFX SFX.
+
+## 2) boucle démo 5 minutes
+
+Accueil client bref → enchaînement de 3 stations: **Bain** → **Séchage** → **Coupe** → récap note A–D + pourboire.
+
+Aucun échec dur: uniquement notes et bonus fluidité. La lisibilité repose sur des **heatmaps**: saleté, humidité, longueur. Inspiré de la lecture visuelle claire observée dans les jeux de shelter et d’élevage récents. [YouTube+1](https://www.youtube.com/watch?v=VvE-8befTvk&utm_source=chatgpt.com)
+
+## 3) design des 3 stations
+
+### A. bain — shampouinage
+
+But: effacer un “dirt mask”, couvrir un “foam mask”, rincer propre.
+
+Inputs: arroser maintenir, frotter glisser, rincer bouton.
+
+Système:
+
+- Dirt et foam en **Render Targets** sur UV du chien; l’eau et la mousse modifient les masques en temps réel.
+- Confort: température/pression dans une zone idéale. Hors zone: humeur baisse.
+    
+    Score: C 70 %, B 90 %, A 98 % zones propres.
+    
+    Réf: bains et stations de lavage d’Animal Shelter 2 pour le modèle mental joueur. [YouTube+1](https://www.youtube.com/watch?v=3FThh3_rzco&utm_source=chatgpt.com)
+    
+
+### B. séchage
+
+But: réduire un “wetness map” sans surchauffer.
+
+Inputs: cône d’air piloté, slider température.
+
+Système: humidité perle et décroît sous le cône; température trop élevée génère frizz et malus humeur.
+
+Score: seuils de sécheresse par zones plus bonus si maintien bref dans la zone idéale.
+
+### C. coupe des poils
+
+But: atteindre une longueur cible tolérante.
+
+Inputs: déplacer tondeuse, maintenir pour couper, 3 gardes de longueur.
+
+Système: guides colorés, “snap assist” très léger pour stabiliser la main. Score A si 95 % des surfaces dans la tolérance.
+
+## 4) sfx, vfx, “juicyness” ciblée
+
+**Philosophie sonore hybride**
+
+- **Hades 2**: couches SFX “sweeteners” à l’impact, léger side-chain sur l’ambiance quand l’action réussit, variations de pitch pour éviter la répétition. Inspiré des pratiques décrites par Darren Korb. [Groninger Studentenkrant+1](https://studentenkrant.org/2024/05/a-conversation-with-hades-ii-audio-director-darren-korb/?utm_source=chatgpt.com)
+- **Animal Crossing: New Horizons**: micro-détails tactiles et chaleureux, volume doux, feedbacks diégétiques lisibles même sans l’écran. Exemple: pas et frottements qui changent selon matière et outil. [Gamemusic - Listen to games+1](https://gamemusic.net/the-sound-of-animal-crossing-new-horizons/?utm_source=chatgpt.com)
+
+**Orchestration technique UE5**
+
+- **MetaSounds** pour routing dynamique: layers mousse, eau, tondeuse, “tick de combo”.
+- **Niagara**: bulles, gouttes, vapeur, poil qui gonfle sous air chaud.
+- **Pathing**: lors d’un geste, échantillonner la trajectoire tous les N centimètres pour:
+    1. peindre le RT,
+    2. instancier FX parcimonieux,
+    3. déclencher un micro-son aléatoire avec légère déviation de pitch.
+- **Mix**: side-chain léger de la BGM sur événements de réussite, attaque douce, release courte.
+
+## 5) art direction rapide
+
+Réaliste stylisé, propre, lisible à deux mètres.
+
+Salon niveau 1: carrelage cheap, lumière froide, outils basiques.
+
+Progression façon “Gran Turismo”: on débloque des paliers esthétiques et ergonomiques jusqu’à un salon **premium** inspiré **NOT A HOTEL**: bois clair, pierre, lumière naturelle, lignes japonaises contemporaines. Utiliser ces références d’architecture pour les palettes et matériaux. [NOT A HOTEL+2NOT A HOTEL+2](https://notahotel.com/en?utm_source=chatgpt.com)
+
+## 6) progression, salons, animaux
+
+- **Salons**: partir d’un atelier “un peu nul” et gravir des tiers esthétiques et fonctionnels.
+- **Animaux à l’arrivée**: état variable: très sale, stressé, blessure légère. Le loop de soin améliore humeur et “adoptabilité” dans les jeux de shelter: nous en gardons la logique de besoins simples pour la démo sans ajouter l’adoption. [YouTube](https://www.youtube.com/watch?v=VvE-8befTvk&utm_source=chatgpt.com)
+
+## 7) implémentation UE5 — check rapide
+
+- **Scene**: `Map_Proto_Salon` avec 3 “bays” alignées: Bain, Séchage, Coupe.
+- **Blueprints**: `BP_StationBase` avec `StartStation(DogData)` et `OnStationComplete(Result)`. Trois enfants: `BP_Station_Bain`, `BP_Station_Sechage`, `BP_Station_Coupe`.
+- **Data**: `DA_StationTuning` expose seuils, tolérances, vitesses, gains humeur.
+- **Masques**: 3 Render Targets 1024: dirt, foam, wetness.
+- **VFX**: Niagara simples sur sockets d’outil, MPC pour piloter intensités.
+- **SFX**: MetaSounds par station avec bus commun, side-chain sur BGM.
+- **UI diégétique**: montre poignet: humeur, flow, soft-timer.
+- **Perf cible**: 60 fps PC milieu.
+
+## 8) définition de fini démo
+
+- Enchaînement jouable des 3 stations avec notes cohérentes A–D.
+- Heatmaps visibles et désactivables.
+- VFX et SFX présents à chaque action clé, sans overlap agressif.
+- Écran récap: note, pourboire, photo avant/après.
+- Build stable 5 minutes, onboarding immédiat.
+
+## 9) références directes à garder sous la main
+
+- **Animal Shelter 2**: structure des stations de lavage et logique de besoins. [YouTube+1](https://www.youtube.com/watch?v=VvE-8befTvk&utm_source=chatgpt.com)
+- **Little Friends: Dogs & Cats**: repères de care simple et tactile sur Switch. [Nintendo of Europe SE+1](https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Little-Friends-Dogs-Cats-1563007.html?srsltid=AfmBOor2SlYh11wq8-LYHWSnfytjotNPWHfv0MwlxyKOmn0gxD0Pl0Ri&utm_source=chatgpt.com)
+- **SFX feel Hades 2 + ACNH**: layering punchy mais doux, détails sonores diégétiques. [Groninger Studentenkrant+2Gamemusic - Listen to games+2](https://studentenkrant.org/2024/05/a-conversation-with-hades-ii-audio-director-darren-korb/?utm_source=chatgpt.com)
+- **DA premium**: NOT A HOTEL, villas Setouchi: matériaux naturels, lignes nettes, horizon calme. [NOT A HOTEL+1](https://notahotel.com/en/properties/setouchi?utm_source=chatgpt.com)
+
+## 10) ordre d’exécution aujourd’hui
+
+1. Bain: RT saleté + mousse, arrosoir et éponge, score A/B/C fonctionnel.
+2. Séchage: cône d’air qui fait baisser humidité, soft-timer de flow.
+3. Coupe: guides de longueur, 3 gardes, snap léger.
+4. MetaSounds basiques: eau, mousse, souffle, tondeuse, “tick de combo”.
+5. Écran récap + photo avant/après.
+
+Si tu veux, je te package ce mini-GDD dans le format de ton ancien modèle “Audi Holdings” en une page propre et prête à partager. Sinon, tu peux coller tel quel et démarrer le bloc 1: **Bain**.
+
+- Bain - Shampouinage
+- Sechage
+- Coupe des poils
+
+Tu peux avoir différents salon de toilettage en mode ça débloque via l’ho
+
+Les animaux qui arrivent dons ton refuge peuvent être en très mouvais état. Prends soin de leur
+santé et de leurs besoins pour améliorer leur bien-être et augmenter leur Aonce d'être adoptésl
+Nourris-les pour qu'ils n'aient pas faim. Donne-leur à boire pour assouvir leur soif. Laisse-les se
+reposer quand ils sont fatigués. Soigne-les quand ils sont malades ou blessés. Maintiens leur
+vigueur en surveillant leur réactions à différentes stimulations. Joue avec eux pour qu'ils soient
+heureuxl N'oublie pas que chaque animal est différent et le moyen de satisfaire à leurs besoins
+peut différer aussi.
+
+![Arc_9zdAOH8MH2.jpg](old/Arc_9zdAOH8MH2.jpg)
+
+![Arc_Va0ia2Hcuh.jpg](old/Arc_Va0ia2Hcuh.jpg)
+
+Est ce que le salon peut pas être un peu nul au début et tu débloques des choses au fur et à mesure. en mode arch plus premium peut être une feature de déblocage à la gran turismo.
+
+la meme chose toilettage canin
+
+netoyer des chiens et des chats simulator
+
+stations ou tu nettoies des animaux
+
+toilettages 
+
+batiment le gameplay et les props.
+
+les chiens arrivent dans le magasin table de brossage,
+
+props de la table le mini jeu de qte, la partie implémentation la partie vfx sfx juicyness et game design du mini jeu.
+
+brosse le chien lave le chien ciseaux et coupe le chien, process en plusieurs étapes, plusieurs stations plus complet.
+
+complet assez simple.
+
+scene dans unreal.
+
+niveau da exactement ça donc realiste / simulateur. 
+
+Réaliste.
