@@ -1,0 +1,15 @@
+﻿Name
+"Recap Using Setup Splines / Swirl / Warp / Threshold Mask "
+Créer un léger masque pour un détail
+Spline Thickness Effect
+Spline Polyquadratic + Scatter on Spline Grayscale | Disconnect Preview to turn off the points and arrow
+Material Mode Selection
+Reducing Height Scale to get more details in RTAO Ambiant Occlusion
+BACKSPACE delete the node and not the connection
+Max mode or Lighten : Compares two input and keep the lighter values
+Max Mode Blend Usecase
+Shortcut Highlight a connection then Tab or Space bar to directly connect
+Code Couleurs pour maps
+"Change the blending mode color to max, to not loose details when generatiing tile patterns"
+Puissance de 2 à connaitre par <3
+Warp Node Setup + Swirl
