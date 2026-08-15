@@ -1,0 +1,7 @@
+# Pattern programming
+
+Created: October 19, 2025 7:42 PM
+Update: October 19, 2025 10:08 PM
+status: Not started
+
+In Pattern Programming I often use Enter Update Exit for dealing with game logic instead of doing old logic very deprecated like event tick and it ensures a clean logic that will not break when including new features.
