@@ -1,0 +1,13 @@
+# Via FFMPEG extract audio -ss et -vn (assassination classroom sfx)
+
+Created: March 25, 2025 5:40 PM
+Update: March 25, 2025 5:42 PM
+
+[_assassination_classroom_intro_sfx.wav](Via%20FFMPEG%20extract%20audio%20-ss%20et%20-vn%20(assassination/_assassination_classroom_intro_sfx.wav)
+
+- **i** : chemin de la vidéo source.
+- **ss 00:01:40** : point de départ de l'extraction.
+- **to 00:01:44** : point de fin, soit 4 secondes de durée.
+- **vn** : désactive le flux vidéo pour n'extraire que l'audio.
+- **acodec pcm_s16le -ar 44100 -ac 2** : encode l'audio en WAV avec un taux d'échantillonnage de 44100 Hz et 2 canaux (stéréo).
+- Le chemin de sortie est identique à celui de la vidéo, plaçant le fichier WAV dans le même dossier.
