@@ -1,0 +1,21 @@
+# ytb dlp
+
+Created: January 12, 2025 1:40 PM
+Update: January 20, 2025 11:04 AM
+
+![image.png](ytb%20dlp/image.png)
+
+```bash
+yt-dlp -f 137+251 -o "%(title)s.%(ext)s" <URL>
+```
+
+```cpp
+// Command Lines
+yt-dlp -f "bv*+ba/best" -o "%(title)s.%(ext)s" https://www.youtube.com/watch?v=r-o-oH13mFE
+// Best video + Best Audio.
+yt-dlp -F <URL>
+// list format video
+yt-dlp -f 137+251 -o "%(title)s.%(ext)s" <URL>
+// Download the Number VideoID + AudioID
+
+```
