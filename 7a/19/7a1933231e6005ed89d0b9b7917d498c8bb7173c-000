@@ -1,0 +1,41 @@
+# Convention de nommage
+
+Date de création: July 29, 2025 11:41 PM
+
+tests en laboratoire montrent un léger avantage pour le `snake_case` en termes de vitesse de reconnaissance
+
+tests en laboratoire montrent un léger avantage pour le `snake_case` en termes de vitesse de reconnaissance
+
+ConventionExempleUtilisation Principale (Tendance)
+
+**PascalCase**
+
+```
+UserProfile
+```
+
+Classes, Composants UI (React), Types
+
+**camelCase**
+
+```
+userName
+```
+
+Variables, Fonctions (JavaScript/Java)
+
+**snake_case**
+
+```
+user_name
+```
+
+Variables, Fonctions (Python), Colonnes SQL
+
+**kebab-case**
+
+```
+user-profile
+```
+
+Noms de fichiers web, classes CSS, URLs
