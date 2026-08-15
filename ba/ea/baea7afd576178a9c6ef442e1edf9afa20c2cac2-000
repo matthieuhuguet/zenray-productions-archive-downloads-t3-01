@@ -1,0 +1,30 @@
+﻿Project name,Priority,Status
+Fix le blueprint Start Stop Aim : SetAimCursorStateUI,,Done
+Camera ToggleStation + Animation Lerp,,Done
+Houdini Faire un groom procédural pour le labrador 2-3 j,Low,Not started
+Set Up les trois mini jeux en accord. Polish,High,Not started
+Clean Up de la documentation le faire sur le mac au propre vers la fin le 10-25,Low,Not started
+"Ajouter de meilleurs decals / effets visuels FX Station / Ajouter la musique (VFX+SFX) | 60–90min | Focus cam + hearts + whoosh, loop musique branchée",High,Not started
+ABP Dog Petting      | 60–120m  | Idle↔Pet loop + “happy pop” notify (sons & VFX),Medium,Not started
+"Ajouter un environnement de la station. Blockout Station     | 60–120m  | Lumières, props simples → frame propre",Low,Not started
+La musique c’est good,,Done
+"Wetness ",,Not started
+Foam Bath,,Not started
+Dry VFX,,Not started
+Bilan 10-24,,Done
+,,Done
+VFX _Tick,,Done
+Peinture UV sur Render Target,,Done
+rajouter 4 angles de caméra pour smooth et rotate Pour pouvoir rotate l’angle du chien et le nettoyage.,,Not started
+Systeme de spawn du chien et de transport,,Dropped
+En terme de code tout peut se baser sur le système de Paint,,Not started
+Beam VFX ?,,Not started
+"Step Of Gameplay Le Joueur prends l’outil et ou déplace le chien
+1. Wash (Scrub + Rince) 2. Cut 3. Dry",,Not started
+VFX : HotAir,,Done
+VFX : DogCut,,Not started
+VFX : WaterJet,,Done
+Mesh : Station_Dry,,Done
+Mesh : Station_Bath,,Done
+Mesh : Station_Cut,,Done
+VFX : FoamBubble,,Done
