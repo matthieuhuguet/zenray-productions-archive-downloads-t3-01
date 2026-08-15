@@ -1,0 +1,52 @@
+﻿Property,Fichiers,Nouveau projet : Project Myth // Parrallèle Modélisation Doryu Creating a hero weapon asset.
+,,Ok on va pas faire du tout d'animation je trouverai d'autres solutions mais là c'est un enfer ça me sape toute mon énergie.
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2041.png,
+Right side is redLeft side is blue,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2040.png,Animation
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2043.png,Preset
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2042.png,In blender modify pivot
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2045.png,Setup 30 fps in scene
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2046.png,Blender video editingadd image strip
+,"PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%206.jpg, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2047.png",Import sequence in premiere
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2044.png,Container is the .dot extension
+Face orientation,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2052.png,
+files name convention,,Instance_Files
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2048.png,
+,,Find the issue of texture path
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2050.png,hide sprinkles from the render not the instances
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2051.png,Select faces and flip normal
+,"PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%207.jpg, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2049.png",False colors + Exposure
+,,Toujours sauvegarder en PNG et non MP4 MKV le rendu des animations pour ne pas perdre toutes les frames.
+Long métrage,,Feature film
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2054.png,Super simple ! mouvement de cameraCréer un objet l'attacher en tant que parent à la cameraFaire pivoter l'objet
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2053.png,Le scale joue sur la distance de la camera !
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%208.jpg,https://easings.net/
+,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2055.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2056.png",fix interpolation node
+,,Ctrl + Shift = snap + precision mode
+,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2057.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2058.png",F curve elastic
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2062.png,Compositor Setup
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2061.png,Chromatic aberration = dispersion & distorsion.
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/ezgif-6-d93b47786c.png,APNG !But Gif still better
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2060.png,I = insert keyframes
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2059.png,R / S to rotate and scale in graph editor.
+,,
+Mouse over a parameter Ctrl C to copy itCtrl V to paste / transfer,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2063.png,Mouse hover = ctrl c
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2065.png,Bloom / Glare / Lens flare
+Déplacer grâce à la croix.hit viewer node to move it.,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2067.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2068.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2069.png",Ctrl Shift render
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2064.png,Compositor mode
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2066.png,LookMedium High contrast is ok.
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2070.png,ctrl tab pour changer d'onglet
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%209.jpg,Area light
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%2011.jpg,Creating a window effect light
+inset,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2075.png,I = Inset
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%2010.jpg,
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2074.png,Agrandir la taille de rendu de la camera c'est molette quand on ne lock pas la caméra.
+,"PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2071.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2072.png, PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2073.png",Assigning new object blender by collection in scene.
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2081.png,Clamp Overlap
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/saved_compressed_image%2012.jpg,
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2080.png,Merge vertices
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2082.png,Make Edge/FaceVertex ‣ New Edge/Face from Vertices
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2076.png,Exposure
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2079.png,Scaling the plane ground
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2078.png,Change view mode
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2077.png,Sky Texture and Sun Rotation
+,PORTFOLIO%20PART%20VII%20Simpler%20learning/image%2083.png,Create a new area in windowNew layout
