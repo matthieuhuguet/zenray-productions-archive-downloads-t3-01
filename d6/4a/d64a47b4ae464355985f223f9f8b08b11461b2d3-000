@@ -1,0 +1,10 @@
+﻿%f display floatso number .0 = floatex : 3.0,Property,Fichiers
+global variable != is a way of sharing a variable across multiple functions.,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20137.png
+Naming Convention : capitalize the const variable name.,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20138.png
+,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20139.png
+Array,"""Back to back"" en mémoire signifie que les éléments du tableau sont stockés consécutivement, sans espaces entre eux, dans une séquence continue.",
+Taking space in the system,,"PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20140.png, PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20141.png, PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20142.png"
+Convert a computepromote,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/image%20143.png
+Computer is a canvas of bytes (with adress),,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/saved_compressed_image%208.jpg
+RAM,randomAccessMemory,
+,,PORTFOLIO%20PART%20V%202024%20Houdini%203D%20&%20Code%20Tech%20Lesso/saved_compressed_image%209.jpg
