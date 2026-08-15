@@ -1,0 +1,47 @@
+# Description
+
+Voici la fiche technique complète pour votre release, alliant rigueur technique et narration visuelle.
+
+**Éditeur(s) :** Adobe
+
+**Système (OS) :** Windows 10 / 11 (64-bit)
+
+**Version :** 7.4.3
+
+**Langue(s) :** Multi (Français, Anglais, Allemand, Japonais, Chinois)
+
+### Description de l'application
+
+Le métal s'oxyde, le cuir se craquèle, et chaque rayure sur une armure raconte une bataille oubliée. Substance 3D Painter n'est pas un simple outil de texturing ; c'est le pinceau qui donne une âme à la géométrie froide. En utilisant le Physical Based Rendering (PBR), il permet de peindre des matériaux complexes en temps réel, où la lumière réagit avec une fidélité absolue sur chaque pore de la peau ou chaque grain de roche.
+
+C'est l'étalon-or de l'industrie, le pont entre le modèle brut et l'émotion visuelle. Que vous créiez un univers post-apocalyptique ou une forêt onirique, l'application transforme la technique pure en un acte organique. Ici, la matière devient vivante.
+
+---
+
+### Captures d'écran
+
+---
+
+### Configuration minimale
+
+- **Processeur :** Intel Core i5 ou AMD Ryzen 5
+- **Mémoire vive :** 8 Go RAM (16 Go recommandés)
+- **Carte Graphique :** GPU avec 4 Go de VRAM (Nvidia GTX 1060 / Radeon RX 580)
+- **Stockage :** 3 Go d'espace disque disponible (SSD recommandé)
+
+### Installation
+
+- Éteignez votre connexion internet.
+- Lancez l'exécutable **Setup.exe** et suivez les instructions à l'écran.
+- Une fois l'installation terminée, ne lancez pas l'application.
+- Copiez le fichier présent dans le dossier **Crack** et collez-le dans le répertoire d'installation (généralement `C:\Program Files\Adobe\Adobe Substance 3D Painter`).
+- Bloquez l'application dans votre pare-feu pour éviter les vérifications de licence.
+
+---
+
+**Release :** Substance.3D.Painter.v7.4.3.Windows-P2P
+
+**Taille :** 2.11 Go
+
+> **Contrainte de Mentor :** Ne passez pas plus de 10 minutes sur la configuration des menus. L'essence de votre projet réside dans le premier coup de pinceau. Installez, ouvrez une sphère de test, et créez un matériau unique avant la fin de l'heure. L'outil doit servir la vision, pas la ralentir.
+>
