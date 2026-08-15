@@ -1,0 +1,40 @@
+# 20 Mai 2026
+
+Se faire rembourser dès 6h demain.
+
+Tokyo faire en sorte que l’action donne l’information ;
+
+1. 15 photos.
+2. 3 vidéos courtes.
+3. 1 note vocale de 2 minutes : “Aujourd’hui, est-ce que je me suis senti chez moi ici ? Pourquoi ?”
+4. 1 phrase en japonais utilisée dans le réel.
+5. 1 observation business ou Tech Art : “Qu’est-ce que cet environnement me donne envie de construire ?”
+
+Juste agir puis suivre son instinct
+
+Finir le projet faire avancer Louisiana Bayou Project Ship > Affiner (On affine maintenant pas dans le futur) affiner / polish ça ne veut rien dire sans input initial.
+
+C’est incroyable [Claude.md](http://Claude.md) et Agent en parallèle par contre ça bouffe énormément de token mais la vitesse est stratosphérique.
+
+Finalement c’est pas si bête de s’intéresser à ça. 
+
+Tout le travail futur va uniquement passer par des agents et des orchestrateurs. ça ne fait aucun doute. TOUT TOUT TOUT TOUT.
+
+tu veux faire un mesh / tu veux mettre en place une scène / tu veux organiser tes matériaux / tu veux organiser un design document / tu veux une vidéo …
+
+Forme d’ingénieurie moderne ou c’est le rêve qui remplace les contraintes.
+
+Comment se mettre au travail ? Rêgle des deux minutes et assurer 45 min de sport évidemment se remettre en questions faire attention à ses relations interpersonnelles.
+
+équivalent de codex pour Claude.md : 
+
+- Le répertoire global Codex est ~/.codex par défaut.
+- Codex cherche d’abord AGENTS.override.md, puis AGENTS.md.
+- Donc l’équivalent global de ~/.claude/CLAUDE.md, c’est bien ~/.codex/AGENTS.md, sauf si tu utilises AGENTS.override.md ou un CODEX_HOME custom.
+- Ensuite Codex ajoute les AGENTS.md projet, du repo root jusqu’au dossier courant, avec priorité au plus proche.
+
+Il y a aussi un renvoi depuis le repo officiel OpenAI Codex : [**openai/codex docs/agents_md.md**](https://github.com/openai/codex/blob/main/docs/agents_md.md)
+
+Donc tu as raison de demander une preuve. Là, ce n’est pas moi qui “réinvente la roue”, c’est bien le comportement documenté par OpenAI.
+
+![image.png](20%20Mai%202026/image.png)
