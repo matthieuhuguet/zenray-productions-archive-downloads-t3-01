@@ -1,0 +1,11 @@
+# Maya Workflow & Naming
+
+Exemple : **Slay_ENV_BigTemple_v001.ma**
+
+| Component | Description | Example |
+| --- | --- | --- |
+| **ProjectName** | Name or abbreviation of the project. This helps distinguish assets across different projects. | `MyGame` |
+| **AssetType** | A short identifier for the type of asset (e.g., **CHR** for character, **PROPS** for props, **ENV** for environment). | `CHR`, `PROP`, `ENV`, `VEH`, `FX` |
+| **AssetName (PascalConvention)** | The name of the specific asset. Should be descriptive and unique to avoid confusion. | `Knight`, `Sword`, `Tree`, `Car`, `WaterSplash` |
+| **VersionNumber** | Version control is critical. Use a version number to keep track of iterations. Use three digits (e.g., v001). | `v001`, `v002`, etc. |
+| **Extension** | File format (usually `.ma` for Maya ASCII or `.mb` for Maya Binary). | `.ma`, `.mb` |
