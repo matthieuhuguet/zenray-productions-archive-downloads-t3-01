@@ -1,0 +1,90 @@
+# 15 Mars 2026
+
+Houdini ? Complicado parce que besoin de repos mentale
+
+Finir Tatami Galaxy 3 episodes 
+
+Jouer à ? ghost of yotei ?
+
+Ca peut être intéressant de voir pourquoi c’est mauvais : **Greedfall 2: The Dying World**
+
+claude --dangerously-skip-permissions
+
+Centraliser une collection de projet React Pour créer des interfaces peut importe le style rapidement ? Quel intérêt puisque Claude le fait déjà ? J’avoue. le côté rapidité …
+
+Ce qui  ne marche pas c’est de dire faire ça en plan et gros plan : il galère mais si tu lui dis :
+
+fais ça et ça doit ressembler à ça en général il y arrive ou alors tu pars petit et tu itères petit à petit et sur un truc qui te prend vraiment à coeur tu lui dire de prendre son temps.
+
+incroyable tatami galaxy parce que je comprends en 9 episodes que ça parle de moi depuis le début : l’introverti qui ne veut pas sortir de sa chambre et imagines comment le monde pourrait être et pas comme il est “ma vie rose au campus”.
+
+[Continuer de Push UIDisplay](15%20Mars%202026/Continuer%20de%20Push%20UIDisplay%20324d4ee179c3805f8f7fd767bed125a1.md)
+
+https://claude-promo-time.pages.dev/
+
+[Finir d’upate et compiler PushVault2](15%20Mars%202026/Finir%20d%E2%80%99upate%20et%20compiler%20PushVault2%20324d4ee179c3809d9032c37642ffcd8f.md)
+
+Les génies volent les artistes copient SCRAP tout LES PROJETS open source sur github télécharge les pour copier directement le code ne réinventent pas la roue.
+
+L'idée centrale. Claude voit l'état réel du code, identifie le problème le plus urgent, le corrige, vérifie, et recommence vers le niveau d'ambition souhaité indiqué par la documentation.Exécute cette boucle infini en continu jusqu'à ce que je dise "stop" :
+
+1. **ANALYSE** — Lis le code source existant (src/, src-tauri/) et lance `cargo check` + `npm run build` pour
+identifier les erreurs bugs blocants.
+2. **DIAGNOSTIC** — Liste les problèmes bloquants (erreurs de compilation, crashes, features manquantes critiques)
+triés par priorité.
+3. **CODE** — Corrige le problème #1 de la liste. Écris le code, crée/modifie les fichiers nécessaires.
+4. **VÉRIFIE** — Protocole de vérification Relance le build. Si ça compile et fonctionne → retourne à l'étape 1 pour le
+problème suivant. tu dois avoir une excellene UX / UI la meilleur possible donc focus aussi sur le front end le visuel
+et les features doivent être impeccable bien refactorisé aucun bugs blocants.
+
+devenir un vrai expert sur claude ça peut être vraiment intelligent.
+
+Continuer le dev de Push Vault 
+
+Architecture Tauri Rust React Typescript. version desktop PC Windows First.
+
+J’aimerai créer une application qui permettent de recréer des éléments d’interfaces ultra puissante : 1 an de développement équipe de dev veteran avec des experts du design comme Johnny Ive, etc., qui auraient travaillé sur Apple et qui permettent d’avoir des animations et qui soit ultra rapide avec des effets de masque un peu une sorte de photoshop en fait, c'est un Photoshop, mais pour l'interface utilisateur très spécifique. Et avec une emphase sur les interfaces games console AAA Premium. 
+Une app 
+
+une app ultra-puissante qui permet de recréer exactement tous les jeux AAA de ces dernières années, notamment les jeux Sony de PlayStation. Tous les jeux PlayStation, donc :
+
+- The Last of Us Part 1
+- The Last of Us Part 2
+- Horizon Forbidden West
+- Horizon Zero Dawn
+- Ghost of Tsushima
+- Persona 5
+- God Of War
+- Metaphor Refantazio.
+
+En fait, je veux créer l'application ultime pour jeux AAA qui permettent de créer une interface et ce rapidement et facilement, peu importe son niveau de design, avec des centaines et des centaines de fonds déjà installés. Notamment les GT.
+
+Les gt, donc grilletype, les enfin toutes les fontes Google, sans intégrer toutes les fontes Adobe, intégrer après avoir un intégrateur directement de police personnalisée.
+
+Avoir des effets pour les jeux en différents styles, donc des effets comiques mais aussi des effets manga.
+
+Faire tous les possibilités de création d'interface, mais de manière ultra simple.
+
+Le but, c'est de créer des interfaces utilisateurs et d'avoir des effets d'animation déjà pré-intégrés pour créer l'application de création d'interface ultime.
+
+Une application qui aurait pris, par exemple, deux ans de développement pour un artiste de widget, un artiste senior, enfin même une équipe de vétérans qui aurait pris plusieurs années à développer cette application.
+
+Donc pense à un développement de trois ans et un nombre, par exemple, de 1 000 features ou 500 features minimum.
+
+La possibilité aussi d'avoir différentes bulles de dialogue, paramètres, touches de la console, etc.
+
+Toutes les différentes évolutions du design par rapport à faire :
+
+- une grille quadrillée
+- une horizontal box
+- une vertical box
+- tous les effets, mais pas du plus simple
+- PENSES A TOUTES LES FEATURES d’un photoshop pour t’aider mais de manière game spécialiser, réfléchi à hop on fait l’interface hyper vite avec plein de preset par exemple Japon Féodale / Créations de mmilliers de presets boutons taille via recherche pour avoir une direction artistique ultime.
+
+Par exemple, le plus simple ce serait de faire un bouton avec du texte, mais de pouvoir changer d'un style de bouton vers le japon féodal ou un jeu de cowboy, style Red Dead Redemption versus God of War, Ghost of Tsushima, où ces qui rôdent.
+
+Avoir aussi des styles d'effets de plein de jeux. En fait, créer sur une référence d'au moins 64 jeux AAA de ces dernières années qui ont marqué l'industrie avec plus de 90 métacritiques.
+
+Analyser un pour un toutes les interfaces du jeu, en fait, toutes les interfaces utilisateurs du jeu : le menu, le combat, les jeux Pokémon, etc. En fait, c'est faire une boucle infinie pour accumuler le plus de data possible et pouvoir aussi, si par exemple on veut intégrer un masque dans un bouton, avoir des effets de masking pour pouvoir afficher un nom et pour pouvoir créer des effets.
+
+En fait, c'est l'application vraiment ultime et jamais créée qui peut permettre à l'utilisateur de créer en très peu de temps, imaginons une seconde, un résultat vraiment impressionnant, et ce en React. L'export du projet ce serait une page React, je pense, ou alors une image PNG ou JPEG, et l'application serait codée en Tori, plus Rust, plus React.
